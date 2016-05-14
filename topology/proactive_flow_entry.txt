@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1,vlan_vid,1927,1
 1,in_port,5,2
 1,ipv4_dst,75.135.156.87,2
@@ -23,3 +24,10 @@
 5,ipv4_dst,7.197.242.229,2
 5,icmpv4_type,150,2
 5,eth_src,1d:cd:52:dd:9b:89,3
+=======
+in_port,62,1
+tcp_dst,213,2
+ipv6_src,97,2
+ipv4_dst,2,1
+icmpv4_code,201,2
+>>>>>>> f6442ac6bbe9e7880becbe8148e24db35287a489
