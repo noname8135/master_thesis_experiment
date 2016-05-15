@@ -20,16 +20,11 @@ def flow_entry_gen(port_count):	#port count = the port that each switch have
 	global entry_num_each_switch
 	if not os.path.isfile('proactive_flow_entry.txt'):	#generate flow entries if it doesn't exist
 		print "pre-install entry config file doesn't exist, random generating..."	
-<<<<<<< HEAD
 		field_set = ['in_port','vlan_vid','eth_dst','eth_src','ipv4_src','ipv4_dst',
-=======
-		field_type = ['in_port','vlan_vid','eth_dst','eth_src','ipv4_src','ipv4_dst',
->>>>>>> f6442ac6bbe9e7880becbe8148e24db35287a489
 		'ipv6_src','ipv6_dst','tcp_src','tcp_dst','udp_src','udp_dst','icmpv4_type','icmpv4_code',
 		'icmpv6_type','icmpv6_code']
 
 		f = open('proactive_flow_entry.txt','w')
-<<<<<<< HEAD
 		for switch in xrange(1,SWITCH_NUM+1):
 			used = set()
 			for datapath in xrange(entry_num_each_switch):
@@ -48,44 +43,17 @@ def flow_entry_gen(port_count):	#port count = the port that each switch have
 					for i in xrange(7):
 						value += ':'+hex(random.randint(0,0xffff))
 				elif field == 'in_port':
-=======
-		for switch in xrange(SWITCH_NUM):
-			for datapath in xrange(entry_num_each_switch):
-				out_port = str(random.randint(1,port_count[SWITCH_NUM-1]))
-				field = random.choice(field_type)
-
-				if field_type == 'eth_dst' or field_type == 'eth_src':
-					value = hex(random.randint(0,0xff))
-					for i in range(5):
-						value += ':'+hex(random.randint(0,0xff))
-				elif field_type == 'ipv4_src' or field_type == 'ipv4_dst':
-					value = str(random.randint(0,0xff))
-					for i in range(3):
-						value += '.'+str(random.randint(0,0xff))
-				elif field_type == 'ipv6_src' or field_type == 'ipv6_dst':
-					value = hex(random.randint(0,0xff))
-					for i in range(7):
-						value += ':'+hex(random.randint(0,0xffff))
-				elif field_type == 'in_port':
->>>>>>> f6442ac6bbe9e7880becbe8148e24db35287a489
 					value = str(SWITCH_NUM)
 					while value == out_port:	#in_port and out_port should be different
 						value = str(SWITCH_NUM)
 				else:	
-<<<<<<< HEAD
 					if field == 'vlan_vid':
 						value_range = 0x1fff
 					elif field == 'tcp_src' or field == 'tcp_dst' or field == 'udp_src' or field == 'udp_dst':
-=======
-					if field_type == 'vlan_vid':
-						value_range = str(0x1fff)
-					elif field_type == 'tcp_src' or field_type == 'tcp_dst' or field_type == 'udp_src' or field_type == 'udp_dst':
->>>>>>> f6442ac6bbe9e7880becbe8148e24db35287a489
 						value_range = 0xffff
 					else: #icmp code, value
 					 	value_range = 0xff
 					value = str(random.randint(0,value_range))
-<<<<<<< HEAD
 				value = value.replace('0x','')
 				#print '===>'+str(switch)+','+field+','+value+','+out_port+'\n'
 				if field+value not in used:
@@ -93,10 +61,6 @@ def flow_entry_gen(port_count):	#port count = the port that each switch have
 					used.add(field+value)
 				#target switch, match field, match value, output port~
 			del used
-=======
-				f.write(str(switch)+','+field+','+value+','+out_port+'\n')
-				#target switch, match field, match value, output port~
->>>>>>> f6442ac6bbe9e7880becbe8148e24db35287a489
 		f.close()
 	else:
 		print "Reading pre-install entry config file proactive_flow_entry.."
@@ -118,6 +82,7 @@ def myNetwork():
 	net.addLink(s2,s5)
 	net.addLink(s3,s5)
 	net.addLink(s4,s5)
+	dst_switch = [[2,4],[1,3,4,5],[2,5],[1,2,5],[2,3,4]]
 	print "\n"
 	port_count = [2,4,2,3,3]	
 	flow_entry_gen(port_count)	#write to file
