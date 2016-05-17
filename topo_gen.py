@@ -12,6 +12,7 @@ import os.path
 
 SWITCH_NUM = 5
 entry_num_each_switch = 5
+dst_switch = []	#destination of each switch, ex: dst_switch[0][2] = port 3 of s1
 
 def flow_entry_gen(port_count):	#port count = the port that each switch have
 	#[3,2,4,2,1]	s1 has 3 ports, s2 has 2, and so on
@@ -27,8 +28,8 @@ def flow_entry_gen(port_count):	#port count = the port that each switch have
 		f = open('proactive_flow_entry.txt','w')
 		for switch in xrange(1,SWITCH_NUM+1):
 			used = set()
-			for datapath in xrange(entry_num_each_switch):
-				out_port = str(random.randint(1,port_count[SWITCH_NUM-1]))
+			for a in xrange(entry_num_each_switch):
+				out_port = str(random.randint(1,port_count[switch-1]))
 				field = random.choice(field_set)
 				if field == 'eth_dst' or field == 'eth_src':
 					value = hex(random.randint(0,0xff))
@@ -44,7 +45,7 @@ def flow_entry_gen(port_count):	#port count = the port that each switch have
 						value += ':'+hex(random.randint(0,0xffff))
 				elif field == 'in_port':
 					value = str(SWITCH_NUM)
-					while value == out_port:	#in_port and out_port should be different
+					while value == out_port:	#in_port and out_port should be different to avoid infinity loop
 						value = str(SWITCH_NUM)
 				else:	
 					if field == 'vlan_vid':
@@ -82,9 +83,19 @@ def myNetwork():
 	net.addLink(s2,s5)
 	net.addLink(s3,s5)
 	net.addLink(s4,s5)
-	dst_switch = [[2,4],[1,3,4,5],[2,5],[1,2,5],[2,3,4]]
+
+	global dst_switch
+	dst_switch = {}
+	dst_switch[1] = [2,4]
+	dst_switch[2] = [1,3,4,5]
+	dst_switch[3] = [2,5]
+	dst_switch[4] = [1,2,5]
+	dst_switch[5] = [2,3,4]
 	print "\n"
-	port_count = [2,4,2,3,3]	
+	f = open('port_to_switch.txt','w')
+	f.write(str(dst_switch))
+	f.close()
+	port_count = [len(dst_switch[i]) for i in dst_switch]
 	flow_entry_gen(port_count)	#write to file
 
 	info( '*** Starting network\n')
