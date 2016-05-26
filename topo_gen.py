@@ -23,9 +23,9 @@ def flow_entry_gen(port_count):	#port count = the port that each switch have
 	global FLOW_NUM
 	if not os.path.isfile('config/'+config_file+'.entry'):	#generate flow entries if it doesn't exist
 		print "pre-install entry config file doesn't exist, random generating..."	
-		field_set = ['in_port','vlan_vid','eth_dst','eth_src','ipv4_src','ipv4_dst',
-		'ipv6_src','ipv6_dst','tcp_src','tcp_dst','udp_src','udp_dst','icmpv4_type','icmpv4_code',
-		'icmpv6_type','icmpv6_code']
+		field_set = ['eth_dst','eth_src','ipv4_src','ipv4_dst','ipv6_src','ipv6_dst','tcp_src',
+		'tcp_dst','udp_src','udp_dst','icmpv4_type','icmpv4_code','icmpv6_type','icmpv6_code']
+		#'in_port' later because its different
 		f = open('config/'+config_file+'.entry','w')
 		for switch in xrange(1,SWITCH_NUM+1):
 			used = set()
@@ -33,29 +33,27 @@ def flow_entry_gen(port_count):	#port count = the port that each switch have
 				out_port = str(random.randint(1,port_count[switch-1]))
 				field = random.choice(field_set)
 				if field == 'eth_dst' or field == 'eth_src':
-					value = hex(random.randint(0,0xff))
+					value = hex(random.randint(1,0xff))
 					for i in xrange(5):
-						value += ':'+hex(random.randint(0,0xff))
+						value += ':'+hex(random.randint(1,0xff))
 				elif field == 'ipv4_src' or field == 'ipv4_dst':
-					value = str(random.randint(0,0xff))
+					value = str(random.randint(1,0xff))
 					for i in xrange(3):
-						value += '.'+str(random.randint(0,255))
+						value += '.'+str(random.randint(1,255))
 				elif field == 'ipv6_src' or field == 'ipv6_dst':
-					value = hex(random.randint(0,0xff))
+					value = hex(random.randint(1,0xff))
 					for i in xrange(7):
-						value += ':'+hex(random.randint(0,0xffff))
+						value += ':'+hex(random.randint(1,0xffff))
 				elif field == 'in_port':
 					value = str(SWITCH_NUM)
 					while value == out_port:	#in_port and out_port should be different to avoid infinity loop
 						value = str(SWITCH_NUM)
 				else:	
-					if field == 'vlan_vid':
-						value_range = 0x1fff
-					elif field == 'tcp_src' or field == 'tcp_dst' or field == 'udp_src' or field == 'udp_dst':
+					if field == 'tcp_src' or field == 'tcp_dst' or field == 'udp_src' or field == 'udp_dst':
 						value_range = 0xffff
 					else: #icmp code, value
 					 	value_range = 0xff
-					value = str(random.randint(0,value_range))
+					value = str(random.randint(1,value_range))
 				value = value.replace('0x','')
 				#print '===>'+str(switch)+','+field+','+value+','+out_port+'\n'
 				if field+value not in used:
@@ -65,7 +63,7 @@ def flow_entry_gen(port_count):	#port count = the port that each switch have
 			del used
 		f.close()
 	else:
-		print "Reading pre-install entry config file proactive_flow_entry.."
+		print "pre-install entries file exist.."
 
 def myNetwork():      
 	global SWITCH_NUM
@@ -75,10 +73,11 @@ def myNetwork():
 	info( '*** Add switches\n')
 	for i in xrange(1,SWITCH_NUM+1):	#add switch
 		exec('s'+str(i)+' = net.addSwitch(\'s'+str(i)+'\',cls=OVSKernelSwitch)')
- 
+ 	h1 = net.addHost('h1', cls=Host, mac='00:04:00:00:00:01', ip='10.0.0.1/32')
 	info( '*** Add links\n')
-	
+		
 	#if not os.path.isfile('config/'+config_file+'.link'):	#generate links if link file doesn't exist
+	#net.addLink(s1,h1)
 	net.addLink(s1,s2)
 	net.addLink(s1,s4)
 	net.addLink(s2,s3)
@@ -87,9 +86,7 @@ def myNetwork():
 	net.addLink(s3,s5)
 	net.addLink(s4,s5)
 	dst_switch = {} #destination of each switch, ex: dst_switch[0][2] = port 3 of s1
-	'''for i in xrange(1,SWITCH_NUM+1):
-		dst_switch[i] = []
-	'''
+	
 	dst_switch[1] = [2,4]
 	dst_switch[2] = [1,3,4,5]
 	dst_switch[3] = [2,5]
@@ -102,7 +99,6 @@ def myNetwork():
 	f.close()
 	port_count = [len(dst_switch[i]) for i in dst_switch]
 	flow_entry_gen(port_count)	#write to file
-
 	info( '*** Starting network\n')
 	net.build()
 	info( '*** Starting controllers\n')
