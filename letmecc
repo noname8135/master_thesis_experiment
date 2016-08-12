@@ -1,0 +1,2021 @@
+start new at %d 1
+in s1: 
+normal to next ('icmpv4_type', '43', 5, 17, 794)
+in s5: 
+normal to next ('eth_dst', 'd6:f9:18:a6:67:44', 8, 85, 323)
+in s8: 
+normal to next ('eth_src', 'bd:4:83:7f:70:19', -4, 156, 659)
+normal to next ('icmpv4_code', '78', 7, 89, 696)
+in s7: 
+normal to next ('ipv4_dst', '192.168.56.157', 6, 127, 545)
+in s6: 
+normal to next ('ipv4_src', '192.168.56.57', -2, 122, 8)
+{'eth_dst': 'd6:f9:18:a6:67:44', 'ipv4_dst': '192.168.56.157', 'icmpv4_code': '78', 'ipv4_src': '192.168.56.57', 'icmpv4_type': '43', 'eth_src': 'bd:4:83:7f:70:19', 'group_id': 0}
+{1: [('icmpv4_type', '43', 5, 17, 794)], 'end': [], 5: [('eth_dst', 'd6:f9:18:a6:67:44', 8, 85, 323), ('icmpv4_code', '78', 7, 89, 696)], 6: [], 7: [('ipv4_dst', '192.168.56.157', 6, 127, 545)], 8: [], 'start': 1}
+start new at %d 1
+in s1: 
+normal to next ('udp_dst', '668', 5, 20, 121)
+in s5: 
+normal to next ('ipv4_src', '192.168.56.123', 8, 95, 870)
+in s8: 
+normal to next ('eth_dst', 'c2:d3:9:2f:ee:fb', 6, 149, 162)
+in s6: 
+normal to next ('eth_src', 'fe:a3:ab:1d:7b:68', 3, 109, 619)
+in s3: 
+normal to next ('ipv4_dst', '192.168.56.251', 10, 55, 566)
+in s10: 
+normal to next ('udp_src', '624', 11, 184, 518)
+in s11: 
+{'eth_dst': 'c2:d3:9:2f:ee:fb', 'ipv4_dst': '192.168.56.251', 'ipv4_src': '192.168.56.123', 'udp_src': '624', 'eth_src': 'fe:a3:ab:1d:7b:68', 'udp_dst': '668', 'group_id': 1}
+{1: [('udp_dst', '668', 5, 20, 121)], 3: [('ipv4_dst', '192.168.56.251', 10, 55, 566)], 'end': [], 5: [('ipv4_src', '192.168.56.123', 8, 95, 870)], 6: [('eth_src', 'fe:a3:ab:1d:7b:68', 3, 109, 619)], 8: [('eth_dst', 'c2:d3:9:2f:ee:fb', 6, 149, 162)], 10: [('udp_src', '624', 11, 184, 518)], 11: [], 'start': 1}
+start new at %d 1
+in s1: 
+normal to next ('tcp_dst', '443', 13, 1, 122)
+in s13: 
+same fv set  ('tcp_dst', '443', 1, 246, 32)
+normal to next ('tcp_src', '340', 2, 252, 544)
+in s2: 
+normal to next ('eth_src', 'ca:15:2b:31:12:fc', 9, 34, 863)
+in s9: 
+same fv set  ('tcp_dst', '443', 1, 164, 301)
+normal to next ('eth_dst', 'c4:7f:27:a4:3b:96', 11, 180, 772)
+in s11: 
+same fv set  ('eth_dst', 'c4:7f:27:a4:3b:96', 9, 203, 796)
+normal to next ('ipv4_src', '192.168.56.28', -6, 218, 172)
+normal to next ('ipv4_dst', '192.168.56.70', 5, 23, 146)
+in s5: 
+same fv set  ('tcp_dst', '443', 2, 97, 476)
+{'eth_dst': 'c4:7f:27:a4:3b:96', 'ipv4_dst': '192.168.56.70', 'tcp_src': '340', 'ipv4_src': '192.168.56.28', 'tcp_dst': '443', 'eth_src': 'ca:15:2b:31:12:fc', 'group_id': 2}
+{1: [('tcp_dst', '443', 13, 1, 122)], 2: [('eth_src', 'ca:15:2b:31:12:fc', 9, 34, 863), ('ipv4_dst', '192.168.56.70', 5, 23, 146)], 'end': [], 5: [('tcp_dst', '443', 2, 97, 476)], 9: [('tcp_dst', '443', 1, 164, 301), ('eth_dst', 'c4:7f:27:a4:3b:96', 11, 180, 772)], 11: [('eth_dst', 'c4:7f:27:a4:3b:96', 9, 203, 796)], 13: [('tcp_dst', '443', 1, 246, 32), ('tcp_src', '340', 2, 252, 544)], 'start': 1}
+start new at %d 1
+in s1: 
+normal to next ('tcp_src', '443', 17, 16, 153)
+in s17: 
+normal to next ('eth_src', '75:c6:28:f5:ab:b8', 20, 338, 455)
+in s20: 
+same fv set  ('tcp_src', '443', -15, 388, 766)
+normal to next ('eth_dst', 'df:65:d2:8e:f:52', 2, 323, 113)
+in s2: 
+same fv set  ('tcp_src', '443', 5, 31, 503)
+in s5: 
+normal to next ('tcp_dst', '546', 7, 87, 337)
+in s7: 
+same fv set  ('tcp_src', '443', 6, 136, 144)
+in s6: 
+same fv set  ('tcp_src', '443', 7, 119, 775)
+normal to next ('ipv4_dst', '192.168.56.170', 8, 112, 134)
+in s8: 
+normal to next ('ipv4_src', '192.168.56.216', 19, 330, 785)
+in s19: 
+{'eth_dst': 'df:65:d2:8e:f:52', 'ipv4_dst': '192.168.56.170', 'tcp_src': '443', 'ipv4_src': '192.168.56.216', 'tcp_dst': '546', 'eth_src': '75:c6:28:f5:ab:b8', 'group_id': 3}
+{1: [('tcp_src', '443', 17, 16, 153)], 2: [('tcp_src', '443', 5, 31, 503)], 'end': [], 5: [('tcp_dst', '546', 7, 87, 337)], 6: [('tcp_src', '443', 7, 119, 775), ('ipv4_dst', '192.168.56.170', 8, 112, 134)], 17: [('eth_src', '75:c6:28:f5:ab:b8', 20, 338, 455), ('eth_dst', 'df:65:d2:8e:f:52', 2, 323, 113), ('ipv4_src', '192.168.56.216', 19, 330, 785)], 8: [], 7: [('tcp_src', '443', 6, 136, 144)], 'start': 1, 19: [], 20: []}
+start new at %d 1
+in s1: 
+normal to next ('icmpv4_code', '1', 5, 2, 972)
+in s5: 
+normal to next ('eth_src', 'c4:2b:6a:7:e0:42', 8, 90, 728)
+in s8: 
+same fv set  ('eth_src', 'c4:2b:6a:7:e0:42', -3, 155, 27)
+normal to next ('eth_dst', 'a0:b:68:1b:f4:77', 7, 98, 898)
+in s7: 
+normal to next ('ipv4_dst', '192.168.56.42', -2, 121, 158)
+normal to next ('ipv4_src', '192.168.56.165', 17, 12, 210)
+in s17: 
+normal to next ('icmpv4_type', '44', 20, 328, 77)
+in s20: 
+{'eth_dst': 'a0:b:68:1b:f4:77', 'ipv4_dst': '192.168.56.42', 'icmpv4_code': '1', 'ipv4_src': '192.168.56.165', 'icmpv4_type': '44', 'eth_src': 'c4:2b:6a:7:e0:42', 'group_id': 4}
+{1: [('icmpv4_code', '1', 5, 2, 972), ('ipv4_src', '192.168.56.165', 17, 12, 210)], 'end': [], 5: [('eth_src', 'c4:2b:6a:7:e0:42', 8, 90, 728), ('eth_dst', 'a0:b:68:1b:f4:77', 7, 98, 898)], 7: [], 8: [], 'start': 1, 20: [], 17: [('icmpv4_type', '44', 20, 328, 77)]}
+start new at %d 1
+in s1: 
+normal to next ('udp_src', '700', 5, 15, 132)
+in s5: 
+normal to next ('eth_src', 'a6:6e:16:7:2e:37', 8, 81, 628)
+in s8: 
+normal to next ('udp_dst', '61', -3, 151, 760)
+normal to next ('eth_dst', '75:b6:df:d9:10:5a', 7, 82, 34)
+in s7: 
+normal to next ('ipv4_src', '192.168.56.209', 6, 140, 449)
+in s6: 
+{'eth_dst': '75:b6:df:d9:10:5a', 'ipv4_src': '192.168.56.209', 'udp_src': '700', 'eth_src': 'a6:6e:16:7:2e:37', 'udp_dst': '61', 'group_id': 5}
+{1: [('udp_src', '700', 5, 15, 132)], 'end': [], 5: [('eth_src', 'a6:6e:16:7:2e:37', 8, 81, 628), ('eth_dst', '75:b6:df:d9:10:5a', 7, 82, 34)], 6: [], 7: [('ipv4_src', '192.168.56.209', 6, 140, 449)], 8: [], 'start': 1}
+start new at %d 1
+in s1: 
+normal to next ('udp_dst', '407', 17, 13, 431)
+in s17: 
+normal to next ('ipv4_src', '192.168.56.55', 19, 326, 991)
+in s19: 
+normal to next ('eth_src', 'b1:1c:fe:8a:ea:96', 18, 366, 903)
+in s18: 
+normal to next ('eth_dst', 'b4:ee:ba:af:ce:dd', 4, 342, 297)
+in s4: 
+normal to next ('udp_src', '346', 14, 69, 434)
+in s14: 
+normal to next ('ipv4_dst', '192.168.56.46', 3, 268, 913)
+in s3: 
+{'eth_dst': 'b4:ee:ba:af:ce:dd', 'ipv4_dst': '192.168.56.46', 'ipv4_src': '192.168.56.55', 'udp_src': '346', 'eth_src': 'b1:1c:fe:8a:ea:96', 'udp_dst': '407', 'group_id': 6}
+{1: [('udp_dst', '407', 17, 13, 431)], 3: [], 'end': [], 17: [('ipv4_src', '192.168.56.55', 19, 326, 991)], 14: [('ipv4_dst', '192.168.56.46', 3, 268, 913)], 'start': 1, 18: [('eth_dst', 'b4:ee:ba:af:ce:dd', 4, 342, 297)], 19: [('eth_src', 'b1:1c:fe:8a:ea:96', 18, 366, 903)], 4: [('udp_src', '346', 14, 69, 434)]}
+start new at %d 1
+in s1: 
+normal to next ('udp_src', '268', 9, 10, 199)
+in s9: 
+normal to next ('udp_dst', '548', 2, 173, 549)
+in s2: 
+normal to next ('eth_dst', '1f:1f:74:67:28:48', 13, 38, 566)
+in s13: 
+normal to next ('ipv4_dst', '192.168.56.197', 15, 245, 417)
+in s15: 
+normal to next ('eth_src', '86:c3:85:7c:c2:23', 14, 281, 537)
+in s14: 
+normal to next ('ipv4_src', '192.168.56.182', 4, 278, 577)
+in s4: 
+same fv set  ('ipv4_dst', '192.168.56.197', 18, 74, 232)
+in s18: 
+{'eth_dst': '1f:1f:74:67:28:48', 'ipv4_dst': '192.168.56.197', 'ipv4_src': '192.168.56.182', 'udp_src': '268', 'eth_src': '86:c3:85:7c:c2:23', 'udp_dst': '548', 'group_id': 7}
+{1: [('udp_src', '268', 9, 10, 199)], 2: [('eth_dst', '1f:1f:74:67:28:48', 13, 38, 566)], 'end': [], 9: [('udp_dst', '548', 2, 173, 549)], 13: [('ipv4_dst', '192.168.56.197', 15, 245, 417)], 14: [('ipv4_src', '192.168.56.182', 4, 278, 577)], 15: [('eth_src', '86:c3:85:7c:c2:23', 14, 281, 537)], 'start': 1, 18: [], 4: [('ipv4_dst', '192.168.56.197', 18, 74, 232)]}
+start new at %d 1
+in s1: 
+normal to next ('tcp_dst', '22', 9, 4, 178)
+in s9: 
+normal to next ('eth_src', '86:47:76:d3:74:84', 11, 166, 834)
+in s11: 
+normal to next ('eth_dst', 'be:fb:53:fd:5:f4', -5, 207, 123)
+normal to next ('ipv4_dst', '192.168.56.41', 2, 162, 642)
+in s2: 
+{'eth_src': '86:47:76:d3:74:84', 'eth_dst': 'be:fb:53:fd:5:f4', 'group_id': 8, 'ipv4_dst': '192.168.56.41', 'tcp_dst': '22'}
+{1: [('tcp_dst', '22', 9, 4, 178)], 2: [], 'end': [], 9: [('eth_src', '86:47:76:d3:74:84', 11, 166, 834), ('ipv4_dst', '192.168.56.41', 2, 162, 642)], 11: [], 'start': 1}
+start new at %d 1
+in s1: 
+normal to next ('icmpv4_code', '184', 17, 19, 651)
+in s17: 
+normal to next ('ipv4_dst', '192.168.56.17', 19, 335, 776)
+in s19: 
+normal to next ('ipv4_src', '192.168.56.177', -13, 361, 198)
+normal to next ('eth_src', '28:db:92:76:d3:9f', 20, 324, 984)
+in s20: 
+normal to next ('eth_dst', '19:48:8e:52:81:5d', 18, 382, 376)
+in s18: 
+same fv set  ('eth_dst', '19:48:8e:52:81:5d', 3, 360, 599)
+in s3: 
+same fv set  ('icmpv4_code', '184', 6, 49, 45)
+in s6: 
+same fv set  ('eth_dst', '19:48:8e:52:81:5d', 8, 106, 821)
+in s8: 
+normal to next ('icmpv4_type', '196', 14, 60, 703)
+in s14: 
+{'eth_dst': '19:48:8e:52:81:5d', 'ipv4_dst': '192.168.56.17', 'icmpv4_code': '184', 'ipv4_src': '192.168.56.177', 'icmpv4_type': '196', 'eth_src': '28:db:92:76:d3:9f', 'group_id': 9}
+{1: [('icmpv4_code', '184', 17, 19, 651)], 3: [('icmpv4_code', '184', 6, 49, 45), ('icmpv4_type', '196', 14, 60, 703)], 'end': [], 6: [('eth_dst', '19:48:8e:52:81:5d', 8, 106, 821)], 17: [('ipv4_dst', '192.168.56.17', 19, 335, 776), ('eth_src', '28:db:92:76:d3:9f', 20, 324, 984)], 8: [], 14: [], 'start': 1, 18: [('eth_dst', '19:48:8e:52:81:5d', 3, 360, 599)], 19: [], 20: [('eth_dst', '19:48:8e:52:81:5d', 18, 382, 376)]}
+start new at %d 1
+in s1: 
+normal to next ('eth_dst', '1b:3:48:2b:b7:b6', 9, 9, 336)
+in s9: 
+normal to next ('icmpv4_type', '147', 12, 175, 559)
+in s12: 
+normal to next ('ipv4_dst', '192.168.56.169', -8, 228, 674)
+normal to next ('ipv4_src', '192.168.56.190', 2, 177, 365)
+in s2: 
+normal to next ('icmpv4_code', '171', 13, 36, 769)
+in s13: 
+normal to next ('eth_src', 'a9:9a:3c:5b:e2:b2', 17, 8, 25)
+in s17: 
+{'eth_dst': '1b:3:48:2b:b7:b6', 'ipv4_dst': '192.168.56.169', 'icmpv4_code': '171', 'ipv4_src': '192.168.56.190', 'icmpv4_type': '147', 'eth_src': 'a9:9a:3c:5b:e2:b2', 'group_id': 10}
+{1: [('eth_dst', '1b:3:48:2b:b7:b6', 9, 9, 336), ('eth_src', 'a9:9a:3c:5b:e2:b2', 17, 8, 25)], 2: [('icmpv4_code', '171', 13, 36, 769)], 'end': [], 17: [], 9: [('icmpv4_type', '147', 12, 175, 559), ('ipv4_src', '192.168.56.190', 2, 177, 365)], 12: [], 13: [], 'start': 1}
+start new at %d 1
+in s1: 
+normal to next ('udp_src', '864', 13, 3, 979)
+in s13: 
+normal to next ('eth_dst', 'e8:48:3d:6b:52:6e', 2, 247, 646)
+in s2: 
+normal to next ('udp_dst', '521', 5, 35, 767)
+in s5: 
+same fv set  ('udp_src', '864', 2, 99, 179)
+normal to next ('eth_src', '33:a2:94:56:e1:b5', 9, 21, 496)
+in s9: 
+normal to next ('ipv4_dst', '192.168.56.80', 11, 163, 186)
+in s11: 
+normal to next ('ipv4_src', '192.168.56.43', -6, 210, 217)
+{'eth_dst': 'e8:48:3d:6b:52:6e', 'ipv4_dst': '192.168.56.80', 'ipv4_src': '192.168.56.43', 'udp_src': '864', 'eth_src': '33:a2:94:56:e1:b5', 'udp_dst': '521', 'group_id': 11}
+{1: [('udp_src', '864', 13, 3, 979)], 2: [('udp_dst', '521', 5, 35, 767), ('eth_src', '33:a2:94:56:e1:b5', 9, 21, 496)], 'end': [], 5: [('udp_src', '864', 2, 99, 179)], 9: [('ipv4_dst', '192.168.56.80', 11, 163, 186)], 11: [], 13: [('eth_dst', 'e8:48:3d:6b:52:6e', 2, 247, 646)], 'start': 1}
+start new at %d 1
+in s1: 
+normal to next ('udp_src', '305', 17, 14, 956)
+in s17: 
+normal to next ('ipv4_dst', '192.168.56.44', 19, 340, 15)
+in s19: 
+normal to next ('ipv4_src', '192.168.56.54', -13, 371, 521)
+normal to next ('udp_dst', '562', 20, 331, 558)
+in s20: 
+same fv set  ('ipv4_dst', '192.168.56.44', 18, 396, 291)
+in s18: 
+{'udp_src': '305', 'udp_dst': '562', 'group_id': 12, 'ipv4_dst': '192.168.56.44', 'ipv4_src': '192.168.56.54'}
+{1: [('udp_src', '305', 17, 14, 956)], 'end': [], 17: [('ipv4_dst', '192.168.56.44', 19, 340, 15), ('udp_dst', '562', 20, 331, 558)], 'start': 1, 18: [], 19: [], 20: [('ipv4_dst', '192.168.56.44', 18, 396, 291)]}
+start new at %d 1
+in s1: 
+normal to next ('udp_dst', '901', 9, 5, 714)
+in s9: 
+normal to next ('eth_src', 'be:9f:c8:a3:ac:7c', 12, 172, 854)
+in s12: 
+normal to next ('ipv4_dst', '192.168.56.181', 10, 225, 320)
+in s10: 
+normal to next ('ipv4_src', '192.168.56.73', 11, 192, 713)
+in s11: 
+normal to next ('eth_dst', 'a:8f:e2:3f:e8:bf', -6, 205, 207)
+{'eth_dst': 'a:8f:e2:3f:e8:bf', 'ipv4_dst': '192.168.56.181', 'ipv4_src': '192.168.56.73', 'eth_src': 'be:9f:c8:a3:ac:7c', 'udp_dst': '901', 'group_id': 13}
+{1: [('udp_dst', '901', 9, 5, 714)], 'end': [], 9: [('eth_src', 'be:9f:c8:a3:ac:7c', 12, 172, 854)], 10: [('ipv4_src', '192.168.56.73', 11, 192, 713)], 11: [], 12: [('ipv4_dst', '192.168.56.181', 10, 225, 320)], 'start': 1}
+start new at %d 1
+in s1: 
+normal to next ('icmpv4_code', '84', 9, 6, 398)
+in s9: 
+normal to next ('icmpv4_type', '105', 12, 168, 469)
+in s12: 
+normal to next ('eth_src', 'a6:6e:16:7:2e:37', -8, 221, 888)
+normal to next ('ipv4_dst', '192.168.56.187', 11, 170, 636)
+in s11: 
+normal to next ('eth_dst', '21:d8:a9:66:c4:f6', -6, 217, 445)
+{'eth_dst': '21:d8:a9:66:c4:f6', 'ipv4_dst': '192.168.56.187', 'icmpv4_code': '84', 'icmpv4_type': '105', 'eth_src': 'a6:6e:16:7:2e:37', 'group_id': 14}
+{1: [('icmpv4_code', '84', 9, 6, 398)], 'end': [], 9: [('icmpv4_type', '105', 12, 168, 469), ('ipv4_dst', '192.168.56.187', 11, 170, 636)], 11: [], 12: [], 'start': 1}
+start new at %d 1
+in s1: 
+normal to next ('udp_dst', '940', 17, 7, 719)
+in s17: 
+normal to next ('udp_src', '127', 2, 329, 928)
+in s2: 
+same fv set  ('udp_dst', '940', 13, 27, 573)
+in s13: 
+normal to next ('ipv4_src', '192.168.56.183', 16, 258, 25)
+in s16: 
+normal to next ('eth_dst', '99:9f:46:61:de:ae', -12, 312, 78)
+normal to next ('eth_src', 'df:22:68:1f:40:6d', 19, 339, 932)
+in s19: 
+{'eth_dst': '99:9f:46:61:de:ae', 'ipv4_src': '192.168.56.183', 'udp_src': '127', 'eth_src': 'df:22:68:1f:40:6d', 'udp_dst': '940', 'group_id': 15}
+{1: [('udp_dst', '940', 17, 7, 719)], 2: [('udp_dst', '940', 13, 27, 573)], 'end': [], 17: [('udp_src', '127', 2, 329, 928), ('eth_src', 'df:22:68:1f:40:6d', 19, 339, 932)], 13: [('ipv4_src', '192.168.56.183', 16, 258, 25)], 16: [], 'start': 1, 19: []}
+start new at %d 1
+in s1: 
+normal to next ('icmpv4_code', '193', 9, 18, 382)
+in s9: 
+normal to next ('icmpv4_type', '85', 12, 169, 867)
+in s12: 
+normal to next ('eth_src', '1:1e:6c:d8:f0:f1', -7, 232, 340)
+normal to next ('ipv4_dst', '192.168.56.172', 5, 11, 844)
+in s5: 
+{'eth_src': '1:1e:6c:d8:f0:f1', 'group_id': 16, 'icmpv4_code': '193', 'icmpv4_type': '85', 'ipv4_dst': '192.168.56.172'}
+{1: [('icmpv4_code', '193', 9, 18, 382), ('ipv4_dst', '192.168.56.172', 5, 11, 844)], 'end': [], 5: [], 9: [('icmpv4_type', '85', 12, 169, 867)], 12: [], 'start': 1}
+start new at %d 2
+in s2: 
+normal to next ('icmpv4_type', '166', 5, 37, 342)
+in s5: 
+normal to next ('ipv4_src', '192.168.56.66', 1, 84, 450)
+in s1: 
+normal to next ('icmpv4_code', '25', 8, 94, 854)
+in s8: 
+normal to next ('ipv4_dst', '192.168.56.62', 6, 160, 28)
+in s6: 
+normal to next ('eth_dst', 'd7:9b:8d:81:59:a0', 7, 113, 24)
+in s7: 
+{'eth_dst': 'd7:9b:8d:81:59:a0', 'ipv4_dst': '192.168.56.62', 'icmpv4_code': '25', 'ipv4_src': '192.168.56.66', 'icmpv4_type': '166', 'group_id': 17}
+{1: [], 2: [('icmpv4_type', '166', 5, 37, 342)], 'end': [], 5: [('ipv4_src', '192.168.56.66', 1, 84, 450), ('icmpv4_code', '25', 8, 94, 854)], 6: [('eth_dst', 'd7:9b:8d:81:59:a0', 7, 113, 24)], 7: [], 8: [('ipv4_dst', '192.168.56.62', 6, 160, 28)], 'start': 2}
+start new at %d 2
+in s2: 
+normal to next ('tcp_dst', '80', 5, 33, 649)
+in s5: 
+same fv set  ('tcp_dst', '80', 1, 93, 219)
+in s1: 
+normal to next ('tcp_src', '23', 9, 26, 781)
+in s9: 
+same fv set  ('tcp_dst', '80', 2, 179, 992)
+{'group_id': 18, 'tcp_src': '23', 'tcp_dst': '80'}
+{1: [], 2: [('tcp_dst', '80', 5, 33, 649), ('tcp_src', '23', 9, 26, 781)], 'end': [], 5: [('tcp_dst', '80', 1, 93, 219)], 9: [('tcp_dst', '80', 2, 179, 992)], 'start': 2}
+start new at %d 2
+in s2: 
+normal to next ('udp_src', '289', 5, 32, 63)
+in s5: 
+normal to next ('udp_dst', '627', 1, 100, 690)
+in s1: 
+normal to next ('eth_dst', '37:8:4a:68:72:9a', 9, 39, 501)
+in s9: 
+{'udp_src': '289', 'udp_dst': '627', 'group_id': 19, 'eth_dst': '37:8:4a:68:72:9a'}
+{1: [], 2: [('udp_src', '289', 5, 32, 63), ('eth_dst', '37:8:4a:68:72:9a', 9, 39, 501)], 'end': [], 5: [('udp_dst', '627', 1, 100, 690)], 9: [], 'start': 2}
+start new at %d 2
+in s2: 
+normal to next ('icmpv4_type', '243', 5, 28, 210)
+in s5: 
+normal to next ('icmpv4_code', '184', 9, 24, 27)
+in s9: 
+normal to next ('eth_dst', 'c6:1:62:5c:d0:4e', 1, 174, 556)
+in s1: 
+same fv set  ('icmpv4_code', '184', 17, 19, 651)
+in s17: 
+{'eth_dst': 'c6:1:62:5c:d0:4e', 'group_id': 20, 'icmpv4_code': '184', 'icmpv4_type': '243'}
+{1: [('icmpv4_code', '184', 17, 19, 651)], 2: [('icmpv4_type', '243', 5, 28, 210), ('icmpv4_code', '184', 9, 24, 27)], 'end': [], 5: [], 17: [], 9: [('eth_dst', 'c6:1:62:5c:d0:4e', 1, 174, 556)], 'start': 2}
+start new at %d 2
+in s2: 
+normal to next ('ipv4_dst', '192.168.56.172', 17, 30, 883)
+in s17: 
+normal to next ('udp_src', '724', 1, 321, 664)
+in s1: 
+same fv set  ('ipv4_dst', '192.168.56.172', 5, 11, 844)
+in s5: 
+{'udp_src': '724', 'group_id': 21, 'ipv4_dst': '192.168.56.172'}
+{1: [('ipv4_dst', '192.168.56.172', 5, 11, 844)], 2: [('ipv4_dst', '192.168.56.172', 17, 30, 883)], 'end': [], 5: [], 17: [('udp_src', '724', 1, 321, 664)], 'start': 2}
+start new at %d 2
+in s2: 
+normal to next ('udp_dst', '316', 13, 25, 375)
+in s13: 
+normal to next ('udp_src', '374', 16, 244, 507)
+in s16: 
+normal to next ('eth_dst', 'ce:bb:ba:21:c6:f6', 14, 305, 564)
+in s14: 
+normal to next ('eth_src', '6d:30:d3:93:6f:cc', 4, 270, 280)
+in s4: 
+normal to next ('ipv4_src', '192.168.56.84', 18, 66, 674)
+in s18: 
+normal to next ('ipv4_dst', '192.168.56.61', -11, 309, 739)
+{'eth_dst': 'ce:bb:ba:21:c6:f6', 'ipv4_dst': '192.168.56.61', 'ipv4_src': '192.168.56.84', 'udp_src': '374', 'eth_src': '6d:30:d3:93:6f:cc', 'udp_dst': '316', 'group_id': 22}
+{2: [('udp_dst', '316', 13, 25, 375)], 'end': [], 13: [('udp_src', '374', 16, 244, 507)], 14: [('eth_src', '6d:30:d3:93:6f:cc', 4, 270, 280)], 16: [('eth_dst', 'ce:bb:ba:21:c6:f6', 14, 305, 564)], 'start': 2, 18: [], 4: [('ipv4_src', '192.168.56.84', 18, 66, 674)]}
+start new at %d 2
+in s2: 
+normal to next ('icmpv4_type', '43', 5, 40, 773)
+in s5: 
+{'group_id': 23, 'icmpv4_type': '43'}
+{'start': 2, 2: [('icmpv4_type', '43', 5, 40, 773)], 'end': [], 5: []}
+start new at %d 2
+in s2: 
+normal to next ('tcp_src', '80', 9, 29, 89)
+in s9: 
+same fv set  ('tcp_src', '80', 1, 165, 733)
+in s1: 
+{'group_id': 24, 'tcp_src': '80'}
+{'start': 2, 2: [('tcp_src', '80', 9, 29, 89)], 'end': [], 1: [], 9: [('tcp_src', '80', 1, 165, 733)]}
+start new at %d 2
+in s2: 
+normal to next ('udp_dst', '407', 17, 22, 551)
+in s17: 
+normal to next ('udp_src', '392', 19, 334, 576)
+in s19: 
+normal to next ('ipv4_src', '192.168.56.184', -13, 376, 315)
+normal to next ('ipv4_dst', '192.168.56.107', 1, 337, 390)
+in s1: 
+same fv set  ('udp_dst', '407', 17, 13, 431)
+{'udp_src': '392', 'udp_dst': '407', 'group_id': 25, 'ipv4_dst': '192.168.56.107', 'ipv4_src': '192.168.56.184'}
+{1: [('udp_dst', '407', 17, 13, 431)], 2: [('udp_dst', '407', 17, 22, 551)], 'end': [], 17: [('udp_src', '392', 19, 334, 576), ('ipv4_dst', '192.168.56.107', 1, 337, 390)], 'start': 2, 19: []}
+start new at %d 3
+in s3: 
+normal to next ('eth_dst', '1b:3:48:2b:b7:b6', 18, 58, 131)
+in s18: 
+normal to next ('tcp_dst', '80', 19, 347, 347)
+in s19: 
+same fv set  ('tcp_dst', '80', 17, 362, 674)
+in s17: 
+same fv set  ('tcp_dst', '80', 1, 325, 128)
+in s1: 
+same fv set  ('eth_dst', '1b:3:48:2b:b7:b6', 9, 9, 336)
+in s9: 
+same fv set  ('tcp_dst', '80', 2, 179, 992)
+in s2: 
+same fv set  ('tcp_dst', '80', 5, 33, 649)
+in s5: 
+same fv set  ('tcp_dst', '80', 1, 93, 219)
+normal to next ('ipv4_src', '192.168.56.108', -14, 365, 367)
+normal to next ('ipv4_dst', '192.168.56.208', 4, 358, 689)
+in s4: 
+normal to next ('eth_src', 'bd:d0:ea:83:d5:ee', 10, 61, 849)
+in s10: 
+normal to next ('tcp_src', '20', 11, 181, 144)
+in s11: 
+same fv set  ('tcp_dst', '80', 9, 215, 660)
+{'eth_dst': '1b:3:48:2b:b7:b6', 'ipv4_dst': '192.168.56.208', 'tcp_src': '20', 'ipv4_src': '192.168.56.108', 'tcp_dst': '80', 'eth_src': 'bd:d0:ea:83:d5:ee', 'group_id': 26}
+{1: [('eth_dst', '1b:3:48:2b:b7:b6', 9, 9, 336)], 2: [('tcp_dst', '80', 5, 33, 649)], 3: [('eth_dst', '1b:3:48:2b:b7:b6', 18, 58, 131)], 'end': [], 5: [('tcp_dst', '80', 1, 93, 219)], 17: [('tcp_dst', '80', 1, 325, 128)], 9: [('tcp_dst', '80', 2, 179, 992)], 10: [('tcp_src', '20', 11, 181, 144)], 11: [('tcp_dst', '80', 9, 215, 660)], 'start': 3, 18: [('tcp_dst', '80', 19, 347, 347), ('ipv4_dst', '192.168.56.208', 4, 358, 689)], 19: [('tcp_dst', '80', 17, 362, 674)], 4: [('eth_src', 'bd:d0:ea:83:d5:ee', 10, 61, 849)]}
+start new at %d 3
+in s3: 
+normal to next ('udp_src', '994', 6, 48, 775)
+in s6: 
+normal to next ('eth_src', '4a:d9:85:28:c7:fc', 8, 104, 523)
+in s8: 
+normal to next ('ipv4_dst', '192.168.56.143', 5, 158, 231)
+in s5: 
+normal to next ('udp_dst', '316', 1, 92, 210)
+in s1: 
+normal to next ('eth_dst', 'ab:46:df:3d:ea:27', -4, 141, 184)
+normal to next ('ipv4_src', '192.168.56.48', 18, 59, 881)
+in s18: 
+{'eth_dst': 'ab:46:df:3d:ea:27', 'ipv4_dst': '192.168.56.143', 'ipv4_src': '192.168.56.48', 'udp_src': '994', 'eth_src': '4a:d9:85:28:c7:fc', 'udp_dst': '316', 'group_id': 27}
+{1: [], 3: [('udp_src', '994', 6, 48, 775), ('ipv4_src', '192.168.56.48', 18, 59, 881)], 'end': [], 5: [('udp_dst', '316', 1, 92, 210)], 6: [('eth_src', '4a:d9:85:28:c7:fc', 8, 104, 523)], 8: [('ipv4_dst', '192.168.56.143', 5, 158, 231)], 'start': 3, 18: []}
+start new at %d 3
+in s3: 
+normal to next ('eth_dst', '1f:1f:74:67:28:48', 18, 57, 456)
+in s18: 
+normal to next ('tcp_dst', '443', 20, 343, 508)
+in s20: 
+normal to next ('ipv4_src', '192.168.56.32', 17, 392, 845)
+in s17: 
+normal to next ('tcp_src', '43', 1, 333, 146)
+in s1: 
+same fv set  ('tcp_dst', '443', 13, 1, 122)
+in s13: 
+same fv set  ('tcp_dst', '443', 1, 246, 32)
+normal to next ('eth_src', 'a9:29:8:d3:2f:12', 2, 255, 269)
+in s2: 
+same fv set  ('eth_dst', '1f:1f:74:67:28:48', 13, 38, 566)
+{'eth_dst': '1f:1f:74:67:28:48', 'tcp_src': '43', 'ipv4_src': '192.168.56.32', 'tcp_dst': '443', 'eth_src': 'a9:29:8:d3:2f:12', 'group_id': 28}
+{1: [('tcp_dst', '443', 13, 1, 122)], 2: [('eth_dst', '1f:1f:74:67:28:48', 13, 38, 566)], 3: [('eth_dst', '1f:1f:74:67:28:48', 18, 57, 456)], 'end': [], 17: [('tcp_src', '43', 1, 333, 146)], 13: [('tcp_dst', '443', 1, 246, 32), ('eth_src', 'a9:29:8:d3:2f:12', 2, 255, 269)], 'start': 3, 18: [('tcp_dst', '443', 20, 343, 508)], 20: [('ipv4_src', '192.168.56.32', 17, 392, 845)]}
+start new at %d 3
+in s3: 
+normal to next ('udp_src', '488', 10, 41, 604)
+in s10: 
+normal to next ('udp_dst', '627', 12, 193, 4)
+in s12: 
+normal to next ('eth_dst', '37:8:4a:68:72:9a', -8, 238, 826)
+normal to next ('ipv4_dst', '192.168.56.44', 4, 196, 411)
+in s4: 
+normal to next ('ipv4_src', '192.168.56.13', 14, 67, 891)
+in s14: 
+normal to next ('eth_src', 'ab:d4:63:a0:a8:c9', 16, 280, 889)
+in s16: 
+{'eth_dst': '37:8:4a:68:72:9a', 'ipv4_dst': '192.168.56.44', 'ipv4_src': '192.168.56.13', 'udp_src': '488', 'eth_src': 'ab:d4:63:a0:a8:c9', 'udp_dst': '627', 'group_id': 29}
+{3: [('udp_src', '488', 10, 41, 604)], 'end': [], 10: [('udp_dst', '627', 12, 193, 4), ('ipv4_dst', '192.168.56.44', 4, 196, 411)], 12: [], 14: [('eth_src', 'ab:d4:63:a0:a8:c9', 16, 280, 889)], 16: [], 'start': 3, 4: [('ipv4_src', '192.168.56.13', 14, 67, 891)]}
+start new at %d 3
+in s3: 
+normal to next ('icmpv4_type', '58', 10, 50, 346)
+in s10: 
+normal to next ('ipv4_dst', '192.168.56.93', 12, 189, 16)
+in s12: 
+normal to next ('icmpv4_code', '1', 9, 235, 558)
+in s9: 
+normal to next ('ipv4_src', '192.168.56.84', -8, 226, 836)
+{'group_id': 30, 'icmpv4_code': '1', 'icmpv4_type': '58', 'ipv4_src': '192.168.56.84', 'ipv4_dst': '192.168.56.93'}
+{3: [('icmpv4_type', '58', 10, 50, 346)], 'end': [], 9: [], 10: [('ipv4_dst', '192.168.56.93', 12, 189, 16)], 12: [('icmpv4_code', '1', 9, 235, 558)], 'start': 3}
+start new at %d 3
+in s3: 
+normal to next ('udp_dst', '521', 6, 52, 96)
+in s6: 
+normal to next ('udp_src', '893', 8, 101, 211)
+in s8: 
+normal to next ('ipv4_src', '192.168.56.22', 5, 153, 155)
+in s5: 
+normal to next ('eth_src', 'a9:9a:3c:5b:e2:b2', -3, 142, 280)
+normal to next ('eth_dst', '37:8:4a:68:72:9a', 7, 115, 154)
+in s7: 
+{'eth_dst': '37:8:4a:68:72:9a', 'ipv4_src': '192.168.56.22', 'udp_src': '893', 'eth_src': 'a9:9a:3c:5b:e2:b2', 'udp_dst': '521', 'group_id': 31}
+{3: [('udp_dst', '521', 6, 52, 96)], 'end': [], 5: [], 6: [('udp_src', '893', 8, 101, 211), ('eth_dst', '37:8:4a:68:72:9a', 7, 115, 154)], 7: [], 8: [('ipv4_src', '192.168.56.22', 5, 153, 155)], 'start': 3}
+start new at %d 3
+in s3: 
+normal to next ('udp_dst', '786', 14, 44, 602)
+in s14: 
+normal to next ('ipv4_src', '192.168.56.41', 16, 266, 304)
+in s16: 
+normal to next ('ipv4_dst', '192.168.56.172', -11, 311, 720)
+normal to next ('udp_src', '570', 4, 275, 623)
+in s4: 
+same fv set  ('udp_dst', '786', 6, 64, 196)
+in s6: 
+normal to next ('eth_dst', 'ce:9b:c3:59:e8:8e', 7, 103, 245)
+in s7: 
+same fv set  ('ipv4_dst', '192.168.56.172', 5, 124, 757)
+in s5: 
+normal to next ('eth_src', '86:47:76:d3:74:84', 10, 47, 56)
+in s10: 
+{'eth_dst': 'ce:9b:c3:59:e8:8e', 'ipv4_dst': '192.168.56.172', 'ipv4_src': '192.168.56.41', 'udp_src': '570', 'eth_src': '86:47:76:d3:74:84', 'udp_dst': '786', 'group_id': 32}
+{3: [('udp_dst', '786', 14, 44, 602), ('eth_src', '86:47:76:d3:74:84', 10, 47, 56)], 'end': [], 5: [], 6: [('eth_dst', 'ce:9b:c3:59:e8:8e', 7, 103, 245)], 7: [('ipv4_dst', '192.168.56.172', 5, 124, 757)], 10: [], 14: [('ipv4_src', '192.168.56.41', 16, 266, 304), ('udp_src', '570', 4, 275, 623)], 16: [], 'start': 3, 4: [('udp_dst', '786', 6, 64, 196)]}
+start new at %d 3
+in s3: 
+normal to next ('tcp_src', '80', 10, 53, 341)
+in s10: 
+same fv set  ('tcp_src', '80', 4, 183, 710)
+in s4: 
+same fv set  ('tcp_src', '80', 10, 72, 3)
+normal to next ('tcp_dst', '22', 6, 62, 148)
+in s6: 
+same fv set  ('tcp_src', '80', 4, 116, 317)
+normal to next ('ipv4_dst', '192.168.56.131', 7, 117, 878)
+in s7: 
+same fv set  ('tcp_src', '80', -2, 125, 128)
+normal to next ('eth_dst', 'a6:19:58:d7:9:47', 14, 80, 582)
+in s14: 
+same fv set  ('eth_dst', 'a6:19:58:d7:9:47', 4, 277, 659)
+normal to next ('eth_src', '33:a2:94:56:e1:b5', 12, 198, 888)
+in s12: 
+same fv set  ('tcp_src', '80', 9, 234, 163)
+in s9: 
+same fv set  ('tcp_src', '80', 1, 165, 733)
+in s1: 
+same fv set  ('tcp_dst', '22', 9, 4, 178)
+{'eth_dst': 'a6:19:58:d7:9:47', 'ipv4_dst': '192.168.56.131', 'tcp_src': '80', 'tcp_dst': '22', 'eth_src': '33:a2:94:56:e1:b5', 'group_id': 33}
+{1: [('tcp_dst', '22', 9, 4, 178)], 3: [('tcp_src', '80', 10, 53, 341)], 'end': [], 6: [('tcp_src', '80', 4, 116, 317), ('ipv4_dst', '192.168.56.131', 7, 117, 878)], 7: [], 9: [('tcp_src', '80', 1, 165, 733)], 10: [('tcp_src', '80', 4, 183, 710), ('eth_src', '33:a2:94:56:e1:b5', 12, 198, 888)], 12: [('tcp_src', '80', 9, 234, 163)], 14: [('eth_dst', 'a6:19:58:d7:9:47', 4, 277, 659)], 'start': 3, 4: [('tcp_src', '80', 10, 72, 3), ('tcp_dst', '22', 6, 62, 148), ('eth_dst', 'a6:19:58:d7:9:47', 14, 80, 582)]}
+start new at %d 3
+in s3: 
+normal to next ('tcp_src', '402', 10, 42, 572)
+in s10: 
+normal to next ('eth_src', '3f:c6:1c:6d:58:fb', 12, 199, 301)
+in s12: 
+normal to next ('tcp_dst', '297', -7, 229, 505)
+normal to next ('ipv4_dst', '192.168.56.233', 11, 200, 777)
+in s11: 
+normal to next ('eth_dst', '2f:ae:d8:81:67:15', -5, 220, 758)
+{'eth_dst': '2f:ae:d8:81:67:15', 'ipv4_dst': '192.168.56.233', 'tcp_src': '402', 'tcp_dst': '297', 'eth_src': '3f:c6:1c:6d:58:fb', 'group_id': 34}
+{3: [('tcp_src', '402', 10, 42, 572)], 'end': [], 10: [('eth_src', '3f:c6:1c:6d:58:fb', 12, 199, 301), ('ipv4_dst', '192.168.56.233', 11, 200, 777)], 11: [], 12: [], 'start': 3}
+start new at %d 3
+in s3: 
+normal to next ('icmpv4_code', '25', 6, 46, 930)
+in s6: 
+normal to next ('eth_dst', '2:4c:af:13:5f:fd', 4, 107, 248)
+in s4: 
+normal to next ('ipv4_dst', '192.168.56.215', 18, 71, 309)
+in s18: 
+normal to next ('eth_src', 'c4:2b:6a:7:e0:42', 19, 341, 24)
+in s19: 
+normal to next ('ipv4_src', '192.168.56.165', 17, 380, 265)
+in s17: 
+normal to next ('icmpv4_type', '115', 20, 359, 62)
+in s20: 
+{'eth_dst': '2:4c:af:13:5f:fd', 'ipv4_dst': '192.168.56.215', 'icmpv4_code': '25', 'ipv4_src': '192.168.56.165', 'icmpv4_type': '115', 'eth_src': 'c4:2b:6a:7:e0:42', 'group_id': 35}
+{3: [('icmpv4_code', '25', 6, 46, 930)], 'end': [], 6: [('eth_dst', '2:4c:af:13:5f:fd', 4, 107, 248)], 17: [], 'start': 3, 18: [('eth_src', 'c4:2b:6a:7:e0:42', 19, 341, 24), ('icmpv4_type', '115', 20, 359, 62)], 19: [('ipv4_src', '192.168.56.165', 17, 380, 265)], 20: [], 4: [('ipv4_dst', '192.168.56.215', 18, 71, 309)]}
+start new at %d 3
+in s3: 
+normal to next ('tcp_src', '487', 6, 43, 718)
+in s6: 
+normal to next ('eth_src', 'be:9f:c8:a3:ac:7c', 18, 45, 970)
+in s18: 
+normal to next ('eth_dst', '59:79:c3:a9:cb:4e', 19, 349, 363)
+in s19: 
+normal to next ('tcp_dst', '161', -13, 379, 446)
+{'eth_src': 'be:9f:c8:a3:ac:7c', 'eth_dst': '59:79:c3:a9:cb:4e', 'group_id': 36, 'tcp_src': '487', 'tcp_dst': '161'}
+{3: [('tcp_src', '487', 6, 43, 718), ('eth_src', 'be:9f:c8:a3:ac:7c', 18, 45, 970)], 'end': [], 6: [], 'start': 3, 18: [('eth_dst', '59:79:c3:a9:cb:4e', 19, 349, 363)], 19: []}
+start new at %d 3
+in s3: 
+normal to next ('udp_dst', '21', 6, 51, 544)
+in s6: 
+normal to next ('udp_src', '253', 4, 105, 639)
+in s4: 
+normal to next ('eth_dst', '82:eb:bc:69:f2:c3', 10, 76, 30)
+in s10: 
+normal to next ('eth_src', '17:82:ba:e7:7a:4', 12, 185, 904)
+in s12: 
+{'udp_src': '253', 'udp_dst': '21', 'group_id': 37, 'eth_dst': '82:eb:bc:69:f2:c3', 'eth_src': '17:82:ba:e7:7a:4'}
+{3: [('udp_dst', '21', 6, 51, 544)], 'end': [], 6: [('udp_src', '253', 4, 105, 639)], 10: [('eth_src', '17:82:ba:e7:7a:4', 12, 185, 904)], 12: [], 'start': 3, 4: [('eth_dst', '82:eb:bc:69:f2:c3', 10, 76, 30)]}
+start new at %d 3
+in s3: 
+normal to next ('udp_dst', '617', 10, 56, 814)
+in s10: 
+normal to next ('udp_src', '269', 11, 186, 57)
+in s11: 
+normal to next ('ipv4_dst', '192.168.56.122', -6, 209, 662)
+{'udp_src': '269', 'udp_dst': '617', 'group_id': 38, 'ipv4_dst': '192.168.56.122'}
+{11: [], 'start': 3, 10: [('udp_src', '269', 11, 186, 57)], 3: [('udp_dst', '617', 10, 56, 814)], 'end': []}
+start new at %d 3
+in s3: 
+normal to next ('udp_dst', '1012', 18, 54, 713)
+in s18: 
+normal to next ('ipv4_src', '192.168.56.56', 19, 355, 656)
+in s19: 
+normal to next ('eth_dst', '6:19:10:13:d9:36', 17, 364, 325)
+in s17: 
+normal to next ('udp_src', '191', 4, 345, 557)
+in s4: 
+same fv set  ('udp_dst', '1012', 6, 77, 314)
+in s6: 
+{'udp_src': '191', 'udp_dst': '1012', 'group_id': 39, 'eth_dst': '6:19:10:13:d9:36', 'ipv4_src': '192.168.56.56'}
+{3: [('udp_dst', '1012', 18, 54, 713)], 'end': [], 6: [], 17: [], 'start': 3, 18: [('ipv4_src', '192.168.56.56', 19, 355, 656), ('udp_src', '191', 4, 345, 557)], 19: [('eth_dst', '6:19:10:13:d9:36', 17, 364, 325)], 4: [('udp_dst', '1012', 6, 77, 314)]}
+start new at %d 4
+in s4: 
+normal to next ('icmpv4_code', '207', 14, 79, 368)
+in s14: 
+normal to next ('icmpv4_type', '5', 16, 264, 90)
+in s16: 
+normal to next ('eth_src', 'e7:73:ad:50:c2:47', -11, 314, 841)
+normal to next ('eth_dst', '1d:8f:16:9f:bb:d2', 15, 263, 139)
+in s15: 
+normal to next ('ipv4_src', '192.168.56.248', -10, 282, 460)
+{'eth_dst': '1d:8f:16:9f:bb:d2', 'icmpv4_code': '207', 'ipv4_src': '192.168.56.248', 'icmpv4_type': '5', 'eth_src': 'e7:73:ad:50:c2:47', 'group_id': 40}
+{'end': [], 14: [('icmpv4_type', '5', 16, 264, 90), ('eth_dst', '1d:8f:16:9f:bb:d2', 15, 263, 139)], 15: [], 16: [], 'start': 4, 4: [('icmpv4_code', '207', 14, 79, 368)]}
+start new at %d 4
+in s4: 
+normal to next ('icmpv4_type', '44', 18, 70, 1000)
+in s18: 
+normal to next ('eth_src', '2d:1b:d:7f:23:68', 3, 350, 115)
+in s3: 
+normal to next ('icmpv4_code', '110', 19, 344, 472)
+in s19: 
+normal to next ('eth_dst', 'c7:43:90:c2:4c:b7', 17, 373, 173)
+in s17: 
+same fv set  ('icmpv4_type', '44', 20, 328, 77)
+in s20: 
+same fv set  ('eth_src', '2d:1b:d:7f:23:68', 18, 393, 574)
+normal to next ('ipv4_src', '192.168.56.64', -15, 391, 18)
+{'eth_dst': 'c7:43:90:c2:4c:b7', 'icmpv4_code': '110', 'ipv4_src': '192.168.56.64', 'icmpv4_type': '44', 'eth_src': '2d:1b:d:7f:23:68', 'group_id': 41}
+{3: [], 'end': [], 17: [('icmpv4_type', '44', 20, 328, 77)], 'start': 4, 18: [('eth_src', '2d:1b:d:7f:23:68', 3, 350, 115), ('icmpv4_code', '110', 19, 344, 472)], 19: [('eth_dst', 'c7:43:90:c2:4c:b7', 17, 373, 173)], 20: [('eth_src', '2d:1b:d:7f:23:68', 18, 393, 574)], 4: [('icmpv4_type', '44', 18, 70, 1000)]}
+start new at %d 4
+in s4: 
+normal to next ('ipv4_src', '192.168.56.22', 10, 65, 268)
+in s10: 
+normal to next ('ipv4_dst', '192.168.56.143', 3, 191, 815)
+in s3: 
+normal to next ('udp_dst', '632', 12, 188, 981)
+in s12: 
+{'udp_dst': '632', 'group_id': 42, 'ipv4_dst': '192.168.56.143', 'ipv4_src': '192.168.56.22'}
+{3: [], 'end': [], 10: [('ipv4_dst', '192.168.56.143', 3, 191, 815), ('udp_dst', '632', 12, 188, 981)], 12: [], 'start': 4, 4: [('ipv4_src', '192.168.56.22', 10, 65, 268)]}
+start new at %d 4
+in s4: 
+normal to next ('udp_dst', '570', 6, 78, 256)
+in s6: 
+{'udp_dst': '570', 'group_id': 43}
+{'start': 4, 'end': [], 6: [], 4: [('udp_dst', '570', 6, 78, 256)]}
+start new at %d 4
+in s4: 
+normal to next ('eth_src', '4a:d9:85:28:c7:fc', 10, 63, 155)
+in s10: 
+normal to next ('eth_dst', 'df:65:d2:8e:f:52', 3, 194, 336)
+in s3: 
+normal to next ('icmpv4_code', '8', 18, 68, 722)
+in s18: 
+normal to next ('ipv4_dst', '192.168.56.172', 19, 351, 938)
+in s19: 
+{'eth_src': '4a:d9:85:28:c7:fc', 'eth_dst': 'df:65:d2:8e:f:52', 'group_id': 44, 'icmpv4_code': '8', 'ipv4_dst': '192.168.56.172'}
+{3: [], 'end': [], 10: [('eth_dst', 'df:65:d2:8e:f:52', 3, 194, 336)], 'start': 4, 18: [('ipv4_dst', '192.168.56.172', 19, 351, 938)], 19: [], 4: [('eth_src', '4a:d9:85:28:c7:fc', 10, 63, 155), ('icmpv4_code', '8', 18, 68, 722)]}
+start new at %d 4
+in s4: 
+normal to next ('icmpv4_code', '129', 18, 73, 333)
+in s18: 
+{'group_id': 45, 'icmpv4_code': '129'}
+{'start': 4, 18: [], 'end': [], 4: [('icmpv4_code', '129', 18, 73, 333)]}
+start new at %d 4
+in s4: 
+normal to next ('udp_dst', '735', 14, 75, 471)
+in s14: 
+normal to next ('udp_src', '856', 3, 267, 800)
+in s3: 
+{'udp_src': '856', 'udp_dst': '735', 'group_id': 46}
+{'start': 4, 3: [], 'end': [], 14: [('udp_src', '856', 3, 267, 800)], 4: [('udp_dst', '735', 14, 75, 471)]}
+start new at %d 5
+in s5: 
+normal to next ('icmpv4_type', '202', 1, 96, 525)
+in s1: 
+normal to next ('icmpv4_code', '49', 2, 88, 791)
+in s2: 
+{'group_id': 47, 'icmpv4_code': '49', 'icmpv4_type': '202'}
+{'start': 5, 2: [], 'end': [], 5: [('icmpv4_type', '202', 1, 96, 525), ('icmpv4_code', '49', 2, 88, 791)], 1: []}
+start new at %d 5
+in s5: 
+normal to next ('udp_src', '84', 2, 91, 183)
+in s2: 
+{'udp_src': '84', 'group_id': 48}
+{'start': 5, 2: [], 'end': [], 5: [('udp_src', '84', 2, 91, 183)]}
+start new at %d 5
+in s5: 
+normal to next ('tcp_src', '80', 7, 83, 152)
+in s7: 
+same fv set  ('tcp_src', '80', -2, 125, 128)
+normal to next ('tcp_dst', '22', 8, 86, 296)
+in s8: 
+normal to next ('eth_dst', 'be:fb:53:fd:5:f4', -4, 159, 654)
+{'eth_dst': 'be:fb:53:fd:5:f4', 'group_id': 49, 'tcp_src': '80', 'tcp_dst': '22'}
+{8: [], 'start': 5, 'end': [], 5: [('tcp_src', '80', 7, 83, 152), ('tcp_dst', '22', 8, 86, 296)], 7: []}
+start new at %d 6
+in s6: 
+normal to next ('icmpv4_type', '96', 3, 118, 174)
+in s3: 
+normal to next ('icmpv4_code', '70', 8, 102, 398)
+in s8: 
+{'group_id': 50, 'icmpv4_code': '70', 'icmpv4_type': '96'}
+{8: [], 'start': 6, 3: [], 'end': [], 6: [('icmpv4_type', '96', 3, 118, 174), ('icmpv4_code', '70', 8, 102, 398)]}
+start new at %d 6
+in s6: 
+normal to next ('udp_dst', '115', 8, 111, 798)
+in s8: 
+{'udp_dst': '115', 'group_id': 51}
+{8: [], 'start': 6, 'end': [], 6: [('udp_dst', '115', 8, 111, 798)]}
+start new at %d 6
+in s6: 
+normal to next ('udp_dst', '735', 3, 108, 497)
+in s3: 
+{'udp_dst': '735', 'group_id': 52}
+{'start': 6, 3: [], 'end': [], 6: [('udp_dst', '735', 3, 108, 497)]}
+start new at %d 6
+in s6: 
+normal to next ('udp_dst', '319', 8, 114, 972)
+in s8: 
+{'udp_dst': '319', 'group_id': 53}
+{8: [], 'start': 6, 'end': [], 6: [('udp_dst', '319', 8, 114, 972)]}
+start new at %d 6
+in s6: 
+normal to next ('udp_dst', '940', 8, 120, 246)
+in s8: 
+{'udp_dst': '940', 'group_id': 54}
+{8: [], 'start': 6, 'end': [], 6: [('udp_dst', '940', 8, 120, 246)]}
+start new at %d 6
+in s6: 
+normal to next ('tcp_dst', '80', 3, 110, 15)
+in s3: 
+{'group_id': 55, 'tcp_dst': '80'}
+{'start': 6, 3: [], 'end': [], 6: [('tcp_dst', '80', 3, 110, 15)]}
+start new at %d 7
+in s7: 
+normal to next ('icmpv4_type', '105', 5, 137, 93)
+in s5: 
+normal to next ('eth_dst', '12:67:b8:ef:fb:91', 6, 131, 543)
+in s6: 
+{'eth_dst': '12:67:b8:ef:fb:91', 'group_id': 56, 'icmpv4_type': '105'}
+{'start': 7, 'end': [], 5: [], 6: [], 7: [('icmpv4_type', '105', 5, 137, 93), ('eth_dst', '12:67:b8:ef:fb:91', 6, 131, 543)]}
+start new at %d 7
+in s7: 
+normal to next ('udp_src', '46', -2, 128, 385)
+{'udp_src': '46', 'group_id': 57}
+{'start': 7, 'end': [], 7: []}
+start new at %d 7
+in s7: 
+normal to next ('udp_src', '991', 5, 135, 322)
+in s5: 
+normal to next ('ipv4_dst', '192.168.56.79', 6, 130, 750)
+in s6: 
+{'udp_src': '991', 'group_id': 58, 'ipv4_dst': '192.168.56.79'}
+{'start': 7, 'end': [], 5: [], 6: [], 7: [('udp_src', '991', 5, 135, 322), ('ipv4_dst', '192.168.56.79', 6, 130, 750)]}
+start new at %d 7
+in s7: 
+normal to next ('icmpv4_code', '140', 5, 123, 594)
+in s5: 
+normal to next ('eth_src', '4a:d9:85:28:c7:fc', 6, 133, 807)
+in s6: 
+same fv set  ('eth_src', '4a:d9:85:28:c7:fc', 8, 104, 523)
+in s8: 
+{'eth_src': '4a:d9:85:28:c7:fc', 'group_id': 59, 'icmpv4_code': '140'}
+{'end': [], 5: [], 6: [('eth_src', '4a:d9:85:28:c7:fc', 8, 104, 523)], 7: [('icmpv4_code', '140', 5, 123, 594), ('eth_src', '4a:d9:85:28:c7:fc', 6, 133, 807)], 8: [], 'start': 7}
+start new at %d 7
+in s7: 
+normal to next ('tcp_dst', '80', 6, 139, 830)
+in s6: 
+same fv set  ('tcp_dst', '80', 3, 110, 15)
+in s3: 
+normal to next ('eth_dst', 'c6:1:62:5c:d0:4e', 5, 138, 237)
+in s5: 
+same fv set  ('tcp_dst', '80', 1, 93, 219)
+in s1: 
+{'eth_dst': 'c6:1:62:5c:d0:4e', 'group_id': 60, 'tcp_dst': '80'}
+{1: [], 3: [], 'end': [], 5: [('tcp_dst', '80', 1, 93, 219)], 6: [('tcp_dst', '80', 3, 110, 15)], 7: [('tcp_dst', '80', 6, 139, 830), ('eth_dst', 'c6:1:62:5c:d0:4e', 5, 138, 237)], 'start': 7}
+start new at %d 7
+in s7: 
+normal to next ('udp_src', '305', -1, 132, 51)
+{'udp_src': '305', 'group_id': 61}
+{'start': 7, 'end': [], 7: []}
+start new at %d 7
+in s7: 
+normal to next ('udp_src', '951', 5, 126, 59)
+in s5: 
+{'udp_src': '951', 'group_id': 62}
+{'start': 7, 'end': [], 5: [], 7: [('udp_src', '951', 5, 126, 59)]}
+start new at %d 7
+in s7: 
+normal to next ('tcp_dst', '443', -1, 134, 196)
+{'group_id': 63, 'tcp_dst': '443'}
+{'start': 7, 'end': [], 7: []}
+start new at %d 7
+in s7: 
+normal to next ('tcp_src', '110', 6, 129, 256)
+in s6: 
+{'group_id': 64, 'tcp_src': '110'}
+{'start': 7, 'end': [], 6: [], 7: [('tcp_src', '110', 6, 129, 256)]}
+start new at %d 8
+in s8: 
+normal to next ('icmpv4_code', '207', 5, 150, 849)
+in s5: 
+normal to next ('icmpv4_type', '65', 6, 152, 243)
+in s6: 
+{'group_id': 65, 'icmpv4_code': '207', 'icmpv4_type': '65'}
+{8: [('icmpv4_code', '207', 5, 150, 849), ('icmpv4_type', '65', 6, 152, 243)], 'start': 8, 'end': [], 5: [], 6: []}
+start new at %d 8
+in s8: 
+normal to next ('tcp_dst', '173', 5, 143, 224)
+in s5: 
+normal to next ('ipv4_dst', '192.168.56.79', 6, 145, 460)
+in s6: 
+{'group_id': 66, 'ipv4_dst': '192.168.56.79', 'tcp_dst': '173'}
+{8: [('tcp_dst', '173', 5, 143, 224), ('ipv4_dst', '192.168.56.79', 6, 145, 460)], 'start': 8, 'end': [], 5: [], 6: []}
+start new at %d 8
+in s8: 
+normal to next ('tcp_src', '622', 5, 154, 916)
+in s5: 
+normal to next ('eth_dst', '12:67:b8:ef:fb:91', 6, 147, 467)
+in s6: 
+normal to next ('tcp_dst', '695', -3, 144, 108)
+{'eth_dst': '12:67:b8:ef:fb:91', 'group_id': 67, 'tcp_src': '622', 'tcp_dst': '695'}
+{8: [('tcp_src', '622', 5, 154, 916), ('eth_dst', '12:67:b8:ef:fb:91', 6, 147, 467)], 'start': 8, 'end': [], 5: [], 6: []}
+start new at %d 8
+in s8: 
+normal to next ('udp_dst', '965', -4, 157, 511)
+{'udp_dst': '965', 'group_id': 68}
+{8: [], 'start': 8, 'end': []}
+start new at %d 8
+in s8: 
+normal to next ('ipv4_dst', '192.168.56.131', 5, 146, 329)
+in s5: 
+{'group_id': 69, 'ipv4_dst': '192.168.56.131'}
+{8: [('ipv4_dst', '192.168.56.131', 5, 146, 329)], 'start': 8, 'end': [], 5: []}
+start new at %d 8
+in s8: 
+normal to next ('icmpv4_code', '143', 5, 148, 377)
+in s5: 
+{'group_id': 70, 'icmpv4_code': '143'}
+{8: [('icmpv4_code', '143', 5, 148, 377)], 'start': 8, 'end': [], 5: []}
+start new at %d 9
+in s9: 
+normal to next ('tcp_src', '443', 11, 167, 648)
+in s11: 
+same fv set  ('tcp_src', '443', 10, 216, 672)
+in s10: 
+normal to next ('tcp_dst', '926', 3, 182, 773)
+in s3: 
+normal to next ('eth_src', 'd1:5b:ec:2d:84:b4', -6, 212, 647)
+{'eth_src': 'd1:5b:ec:2d:84:b4', 'group_id': 71, 'tcp_src': '443', 'tcp_dst': '926'}
+{3: [], 'end': [], 9: [('tcp_src', '443', 11, 167, 648)], 10: [('tcp_dst', '926', 3, 182, 773)], 11: [('tcp_src', '443', 10, 216, 672)], 'start': 9}
+start new at %d 9
+in s9: 
+normal to next ('icmpv4_code', '59', 12, 171, 199)
+in s12: 
+normal to next ('icmpv4_type', '222', 10, 223, 753)
+in s10: 
+{'group_id': 72, 'icmpv4_code': '59', 'icmpv4_type': '222'}
+{'start': 9, 10: [], 'end': [], 12: [('icmpv4_type', '222', 10, 223, 753)], 9: [('icmpv4_code', '59', 12, 171, 199)]}
+start new at %d 9
+in s9: 
+normal to next ('udp_dst', '635', 12, 176, 754)
+in s12: 
+normal to next ('udp_src', '133', 10, 233, 201)
+in s10: 
+{'udp_src': '133', 'udp_dst': '635', 'group_id': 73}
+{'start': 9, 10: [], 'end': [], 12: [('udp_src', '133', 10, 233, 201)], 9: [('udp_dst', '635', 12, 176, 754)]}
+start new at %d 9
+in s9: 
+normal to next ('udp_src', '638', 1, 178, 987)
+in s1: 
+{'udp_src': '638', 'group_id': 74}
+{'start': 9, 'end': [], 1: [], 9: [('udp_src', '638', 1, 178, 987)]}
+start new at %d 9
+in s9: 
+normal to next ('udp_src', '725', 11, 161, 740)
+in s11: 
+normal to next ('ipv4_dst', '192.168.56.188', 10, 202, 911)
+in s10: 
+normal to next ('ipv4_src', '192.168.56.153', -6, 211, 337)
+{'udp_src': '725', 'group_id': 75, 'ipv4_dst': '192.168.56.188', 'ipv4_src': '192.168.56.153'}
+{'start': 9, 10: [], 11: [('ipv4_dst', '192.168.56.188', 10, 202, 911)], 'end': [], 9: [('udp_src', '725', 11, 161, 740)]}
+start new at %d 10
+in s10: 
+normal to next ('icmpv4_type', '139', 4, 190, 47)
+in s4: 
+{'group_id': 76, 'icmpv4_type': '139'}
+{'start': 10, 10: [('icmpv4_type', '139', 4, 190, 47)], 'end': [], 4: []}
+start new at %d 10
+in s10: 
+normal to next ('icmpv4_type', '202', 4, 187, 441)
+in s4: 
+{'group_id': 77, 'icmpv4_type': '202'}
+{'start': 10, 10: [('icmpv4_type', '202', 4, 187, 441)], 'end': [], 4: []}
+start new at %d 10
+in s10: 
+normal to next ('icmpv4_code', '31', 4, 197, 475)
+in s4: 
+{'group_id': 78, 'icmpv4_code': '31'}
+{'start': 10, 10: [('icmpv4_code', '31', 4, 197, 475)], 'end': [], 4: []}
+start new at %d 10
+in s10: 
+normal to next ('icmpv4_type', '64', 4, 195, 765)
+in s4: 
+{'group_id': 79, 'icmpv4_type': '64'}
+{'start': 10, 10: [('icmpv4_type', '64', 4, 195, 765)], 'end': [], 4: []}
+start new at %d 11
+in s11: 
+normal to next ('tcp_src', '80', -5, 204, 881)
+{'group_id': 80, 'tcp_src': '80'}
+{'start': 11, 11: [], 'end': []}
+start new at %d 11
+in s11: 
+normal to next ('icmpv4_type', '73', 9, 213, 167)
+in s9: 
+normal to next ('icmpv4_code', '241', 10, 208, 51)
+in s10: 
+{'group_id': 81, 'icmpv4_code': '241', 'icmpv4_type': '73'}
+{'start': 11, 10: [], 11: [('icmpv4_type', '73', 9, 213, 167), ('icmpv4_code', '241', 10, 208, 51)], 'end': [], 9: []}
+start new at %d 11
+in s11: 
+normal to next ('icmpv4_type', '125', -5, 201, 697)
+{'group_id': 82, 'icmpv4_type': '125'}
+{'start': 11, 11: [], 'end': []}
+start new at %d 11
+in s11: 
+normal to next ('udp_src', '93', 9, 219, 731)
+in s9: 
+{'udp_src': '93', 'group_id': 83}
+{'start': 11, 11: [('udp_src', '93', 9, 219, 731)], 'end': [], 9: []}
+start new at %d 11
+in s11: 
+normal to next ('tcp_dst', '443', 10, 206, 263)
+in s10: 
+{'group_id': 84, 'tcp_dst': '443'}
+{'start': 11, 10: [], 11: [('tcp_dst', '443', 10, 206, 263)], 'end': []}
+start new at %d 11
+in s11: 
+normal to next ('udp_src', '859', -6, 214, 291)
+{'udp_src': '859', 'group_id': 85}
+{'start': 11, 11: [], 'end': []}
+start new at %d 12
+in s12: 
+normal to next ('udp_dst', '463', 10, 240, 171)
+in s10: 
+{'udp_dst': '463', 'group_id': 86}
+{'start': 12, 10: [], 'end': [], 12: [('udp_dst', '463', 10, 240, 171)]}
+start new at %d 12
+in s12: 
+normal to next ('udp_dst', '554', 10, 224, 435)
+in s10: 
+{'udp_dst': '554', 'group_id': 87}
+{'start': 12, 10: [], 'end': [], 12: [('udp_dst', '554', 10, 224, 435)]}
+start new at %d 12
+in s12: 
+normal to next ('udp_dst', '548', -7, 222, 631)
+{'udp_dst': '548', 'group_id': 88}
+{'start': 12, 'end': [], 12: []}
+start new at %d 12
+in s12: 
+normal to next ('tcp_src', '110', 10, 230, 482)
+in s10: 
+normal to next ('tcp_dst', '80', 9, 239, 218)
+in s9: 
+same fv set  ('tcp_dst', '80', 2, 179, 992)
+in s2: 
+same fv set  ('tcp_dst', '80', 5, 33, 649)
+in s5: 
+same fv set  ('tcp_dst', '80', 1, 93, 219)
+in s1: 
+{'group_id': 89, 'tcp_src': '110', 'tcp_dst': '80'}
+{1: [], 2: [('tcp_dst', '80', 5, 33, 649)], 'end': [], 5: [('tcp_dst', '80', 1, 93, 219)], 9: [('tcp_dst', '80', 2, 179, 992)], 10: [], 12: [('tcp_src', '110', 10, 230, 482), ('tcp_dst', '80', 9, 239, 218)], 'start': 12}
+start new at %d 12
+in s12: 
+normal to next ('udp_dst', '965', -7, 236, 982)
+{'udp_dst': '965', 'group_id': 90}
+{'start': 12, 'end': [], 12: []}
+start new at %d 12
+in s12: 
+normal to next ('udp_dst', '366', 10, 231, 873)
+in s10: 
+{'udp_dst': '366', 'group_id': 91}
+{'start': 12, 10: [], 'end': [], 12: [('udp_dst', '366', 10, 231, 873)]}
+start new at %d 12
+in s12: 
+normal to next ('udp_dst', '1009', 9, 227, 162)
+in s9: 
+normal to next ('udp_src', '337', 10, 237, 536)
+in s10: 
+{'udp_src': '337', 'udp_dst': '1009', 'group_id': 92}
+{'start': 12, 10: [], 'end': [], 12: [('udp_dst', '1009', 9, 227, 162), ('udp_src', '337', 10, 237, 536)], 9: []}
+start new at %d 13
+in s13: 
+normal to next ('udp_dst', '634', 1, 243, 14)
+in s1: 
+normal to next ('ipv4_src', '192.168.56.132', 2, 254, 654)
+in s2: 
+normal to next ('udp_src', '556', 15, 260, 852)
+in s15: 
+normal to next ('ipv4_dst', '192.168.56.2', -10, 298, 82)
+{'udp_src': '556', 'udp_dst': '634', 'group_id': 93, 'ipv4_dst': '192.168.56.2', 'ipv4_src': '192.168.56.132'}
+{1: [], 2: [], 'end': [], 13: [('udp_dst', '634', 1, 243, 14), ('ipv4_src', '192.168.56.132', 2, 254, 654), ('udp_src', '556', 15, 260, 852)], 15: [], 'start': 13}
+start new at %d 13
+in s13: 
+normal to next ('tcp_src', '80', 15, 242, 661)
+in s15: 
+same fv set  ('tcp_src', '80', 13, 288, 503)
+normal to next ('ipv4_src', '192.168.56.157', -10, 295, 770)
+normal to next ('tcp_dst', '80', 16, 241, 434)
+in s16: 
+normal to next ('eth_dst', '6b:85:54:9d:17:95', 14, 304, 223)
+in s14: 
+same fv set  ('tcp_dst', '80', 15, 269, 201)
+{'eth_dst': '6b:85:54:9d:17:95', 'group_id': 94, 'tcp_src': '80', 'ipv4_src': '192.168.56.157', 'tcp_dst': '80'}
+{'end': [], 13: [('tcp_src', '80', 15, 242, 661), ('tcp_dst', '80', 16, 241, 434)], 14: [('tcp_dst', '80', 15, 269, 201)], 15: [('tcp_src', '80', 13, 288, 503)], 16: [('eth_dst', '6b:85:54:9d:17:95', 14, 304, 223)], 'start': 13}
+start new at %d 13
+in s13: 
+normal to next ('icmpv4_code', '77', 15, 256, 708)
+in s15: 
+normal to next ('eth_dst', 'e1:e9:a0:54:1d:4c', -9, 286, 874)
+normal to next ('ipv4_src', '192.168.56.234', 2, 259, 896)
+in s2: 
+{'eth_dst': 'e1:e9:a0:54:1d:4c', 'group_id': 95, 'icmpv4_code': '77', 'ipv4_src': '192.168.56.234'}
+{'start': 13, 2: [], 'end': [], 13: [('icmpv4_code', '77', 15, 256, 708), ('ipv4_src', '192.168.56.234', 2, 259, 896)], 15: []}
+start new at %d 13
+in s13: 
+normal to next ('udp_dst', '1012', 15, 250, 637)
+in s15: 
+normal to next ('eth_src', '27:6c:f1:ab:8e:cd', 14, 283, 850)
+in s14: 
+normal to next ('udp_src', '295', 4, 274, 565)
+in s4: 
+same fv set  ('udp_dst', '1012', 6, 77, 314)
+in s6: 
+normal to next ('ipv4_dst', '192.168.56.165', -10, 285, 611)
+{'eth_src': '27:6c:f1:ab:8e:cd', 'udp_dst': '1012', 'group_id': 96, 'ipv4_dst': '192.168.56.165', 'udp_src': '295'}
+{4: [('udp_dst', '1012', 6, 77, 314)], 6: [], 13: [('udp_dst', '1012', 15, 250, 637)], 14: [('udp_src', '295', 4, 274, 565)], 15: [('eth_src', '27:6c:f1:ab:8e:cd', 14, 283, 850)], 'start': 13, 'end': []}
+start new at %d 13
+in s13: 
+normal to next ('udp_dst', '627', 15, 253, 215)
+in s15: 
+normal to next ('udp_src', '564', 14, 294, 185)
+in s14: 
+normal to next ('ipv4_src', '192.168.56.235', -9, 289, 718)
+{'udp_src': '564', 'udp_dst': '627', 'group_id': 97, 'ipv4_src': '192.168.56.235'}
+{'start': 13, 'end': [], 13: [('udp_dst', '627', 15, 253, 215)], 14: [], 15: [('udp_src', '564', 14, 294, 185)]}
+start new at %d 13
+in s13: 
+normal to next ('tcp_src', '443', 16, 251, 279)
+in s16: 
+same fv set  ('tcp_src', '443', -11, 319, 675)
+{'group_id': 98, 'tcp_src': '443'}
+{16: [], 'start': 13, 'end': [], 13: [('tcp_src', '443', 16, 251, 279)]}
+start new at %d 13
+in s13: 
+normal to next ('icmpv4_code', '150', 16, 257, 870)
+in s16: 
+normal to next ('eth_src', '3f:c6:1c:6d:58:fb', 14, 317, 709)
+in s14: 
+normal to next ('icmpv4_type', '34', 4, 271, 268)
+in s4: 
+{'eth_src': '3f:c6:1c:6d:58:fb', 'group_id': 99, 'icmpv4_code': '150', 'icmpv4_type': '34'}
+{'end': [], 13: [('icmpv4_code', '150', 16, 257, 870)], 14: [('icmpv4_type', '34', 4, 271, 268)], 16: [('eth_src', '3f:c6:1c:6d:58:fb', 14, 317, 709)], 'start': 13, 4: []}
+start new at %d 13
+in s13: 
+normal to next ('icmpv4_code', '202', 1, 248, 755)
+in s1: 
+{'group_id': 100, 'icmpv4_code': '202'}
+{'start': 13, 'end': [], 13: [('icmpv4_code', '202', 1, 248, 755)], 1: []}
+start new at %d 13
+in s13: 
+normal to next ('udp_dst', '824', 15, 249, 675)
+in s15: 
+normal to next ('ipv4_src', '192.168.56.206', -9, 296, 779)
+{'udp_dst': '824', 'group_id': 101, 'ipv4_src': '192.168.56.206'}
+{'start': 13, 'end': [], 13: [('udp_dst', '824', 15, 249, 675)], 15: []}
+start new at %d 14
+in s14: 
+normal to next ('tcp_dst', '156', 15, 262, 315)
+in s15: 
+normal to next ('eth_src', 'b7:80:25:df:12:a6', 13, 291, 34)
+in s13: 
+normal to next ('tcp_src', '25', 16, 276, 90)
+in s16: 
+{'eth_src': 'b7:80:25:df:12:a6', 'group_id': 102, 'tcp_src': '25', 'tcp_dst': '156'}
+{'end': [], 13: [], 14: [('tcp_dst', '156', 15, 262, 315), ('tcp_src', '25', 16, 276, 90)], 15: [('eth_src', 'b7:80:25:df:12:a6', 13, 291, 34)], 16: [], 'start': 14}
+start new at %d 14
+in s14: 
+normal to next ('tcp_dst', '416', 4, 273, 286)
+in s4: 
+normal to next ('tcp_src', '142', 16, 265, 436)
+in s16: 
+normal to next ('eth_dst', '9c:61:35:70:61:ae', 13, 306, 849)
+in s13: 
+{'eth_dst': '9c:61:35:70:61:ae', 'group_id': 103, 'tcp_src': '142', 'tcp_dst': '416'}
+{'end': [], 13: [], 14: [('tcp_dst', '416', 4, 273, 286), ('tcp_src', '142', 16, 265, 436)], 16: [('eth_dst', '9c:61:35:70:61:ae', 13, 306, 849)], 'start': 14, 4: []}
+start new at %d 14
+in s14: 
+normal to next ('icmpv4_code', '174', 15, 261, 825)
+in s15: 
+normal to next ('eth_dst', '1c:58:83:a5:78:7d', 13, 293, 925)
+in s13: 
+normal to next ('icmpv4_type', '101', -9, 297, 187)
+{'eth_dst': '1c:58:83:a5:78:7d', 'group_id': 104, 'icmpv4_code': '174', 'icmpv4_type': '101'}
+{'start': 14, 'end': [], 13: [], 14: [('icmpv4_code', '174', 15, 261, 825)], 15: [('eth_dst', '1c:58:83:a5:78:7d', 13, 293, 925)]}
+start new at %d 14
+in s14: 
+normal to next ('icmpv4_type', '125', 15, 272, 51)
+in s15: 
+normal to next ('icmpv4_code', '202', -9, 299, 222)
+{'group_id': 105, 'icmpv4_code': '202', 'icmpv4_type': '125'}
+{'start': 14, 'end': [], 14: [('icmpv4_type', '125', 15, 272, 51)], 15: []}
+start new at %d 14
+in s14: 
+normal to next ('tcp_dst', '443', 16, 279, 79)
+in s16: 
+same fv set  ('tcp_dst', '443', -12, 303, 353)
+{'group_id': 106, 'tcp_dst': '443'}
+{16: [], 'start': 14, 'end': [], 14: [('tcp_dst', '443', 16, 279, 79)]}
+start new at %d 15
+in s15: 
+normal to next ('icmpv4_code', '1', 14, 287, 284)
+in s14: 
+{'group_id': 107, 'icmpv4_code': '1'}
+{'start': 15, 'end': [], 14: [], 15: [('icmpv4_code', '1', 14, 287, 284)]}
+start new at %d 15
+in s15: 
+normal to next ('udp_src', '12', 13, 290, 640)
+in s13: 
+normal to next ('udp_dst', '742', -9, 300, 149)
+{'udp_src': '12', 'udp_dst': '742', 'group_id': 108}
+{'start': 15, 'end': [], 13: [], 15: [('udp_src', '12', 13, 290, 640)]}
+start new at %d 15
+in s15: 
+normal to next ('icmpv4_code', '58', -10, 292, 926)
+{'group_id': 109, 'icmpv4_code': '58'}
+{'start': 15, 'end': [], 15: []}
+start new at %d 15
+in s15: 
+normal to next ('icmpv4_code', '59', 14, 284, 655)
+in s14: 
+{'group_id': 110, 'icmpv4_code': '59'}
+{'start': 15, 'end': [], 14: [], 15: [('icmpv4_code', '59', 14, 284, 655)]}
+start new at %d 16
+in s16: 
+normal to next ('icmpv4_code', '220', -12, 320, 760)
+{'group_id': 111, 'icmpv4_code': '220'}
+{16: [], 'start': 16, 'end': []}
+start new at %d 16
+in s16: 
+normal to next ('udp_dst', '974', -12, 301, 367)
+{'udp_dst': '974', 'group_id': 112}
+{16: [], 'start': 16, 'end': []}
+start new at %d 16
+in s16: 
+normal to next ('udp_src', '111', -12, 318, 896)
+{'udp_src': '111', 'group_id': 113}
+{16: [], 'start': 16, 'end': []}
+start new at %d 16
+in s16: 
+normal to next ('icmpv4_type', '228', 13, 307, 676)
+in s13: 
+normal to next ('icmpv4_code', '40', -11, 302, 156)
+{'group_id': 114, 'icmpv4_code': '40', 'icmpv4_type': '228'}
+{16: [('icmpv4_type', '228', 13, 307, 676)], 'start': 16, 'end': [], 13: []}
+start new at %d 16
+in s16: 
+normal to next ('icmpv4_code', '74', -12, 310, 937)
+{'group_id': 115, 'icmpv4_code': '74'}
+{16: [], 'start': 16, 'end': []}
+start new at %d 16
+in s16: 
+normal to next ('tcp_src', '546', 13, 313, 420)
+in s13: 
+{'group_id': 116, 'tcp_src': '546'}
+{16: [('tcp_src', '546', 13, 313, 420)], 'start': 16, 'end': [], 13: []}
+start new at %d 16
+in s16: 
+normal to next ('icmpv4_code', '10', 14, 308, 338)
+in s14: 
+{'group_id': 117, 'icmpv4_code': '10'}
+{16: [('icmpv4_code', '10', 14, 308, 338)], 'start': 16, 'end': [], 14: []}
+start new at %d 16
+in s16: 
+normal to next ('icmpv4_code', '226', 13, 316, 616)
+in s13: 
+{'group_id': 118, 'icmpv4_code': '226'}
+{16: [('icmpv4_code', '226', 13, 316, 616)], 'start': 16, 'end': [], 13: []}
+start new at %d 16
+in s16: 
+normal to next ('udp_src', '947', -12, 315, 756)
+{'udp_src': '947', 'group_id': 119}
+{16: [], 'start': 16, 'end': []}
+start new at %d 17
+in s17: 
+normal to next ('udp_dst', '26', 1, 336, 703)
+in s1: 
+normal to next ('ipv4_src', '192.168.56.133', 2, 327, 786)
+in s2: 
+{'udp_dst': '26', 'group_id': 120, 'ipv4_src': '192.168.56.133'}
+{'start': 17, 2: [], 'end': [], 1: [], 17: [('udp_dst', '26', 1, 336, 703), ('ipv4_src', '192.168.56.133', 2, 327, 786)]}
+start new at %d 17
+in s17: 
+normal to next ('icmpv4_code', '140', 19, 322, 145)
+in s19: 
+normal to next ('eth_src', 'f2:28:f3:df:d:60', 18, 374, 876)
+in s18: 
+{'eth_src': 'f2:28:f3:df:d:60', 'group_id': 121, 'icmpv4_code': '140'}
+{'start': 17, 18: [], 19: [('eth_src', 'f2:28:f3:df:d:60', 18, 374, 876)], 'end': [], 17: [('icmpv4_code', '140', 19, 322, 145)]}
+start new at %d 17
+in s17: 
+normal to next ('icmpv4_type', '250', 19, 332, 632)
+in s19: 
+normal to next ('ipv4_src', '192.168.56.240', 18, 377, 310)
+in s18: 
+normal to next ('icmpv4_code', '42', 3, 346, 578)
+in s3: 
+{'group_id': 122, 'icmpv4_code': '42', 'icmpv4_type': '250', 'ipv4_src': '192.168.56.240'}
+{3: [], 'end': [], 17: [('icmpv4_type', '250', 19, 332, 632)], 'start': 17, 18: [('icmpv4_code', '42', 3, 346, 578)], 19: [('ipv4_src', '192.168.56.240', 18, 377, 310)]}
+start new at %d 18
+in s18: 
+normal to next ('udp_dst', '541', 3, 354, 964)
+in s3: 
+{'udp_dst': '541', 'group_id': 123}
+{'start': 18, 18: [('udp_dst', '541', 3, 354, 964)], 3: [], 'end': []}
+start new at %d 18
+in s18: 
+normal to next ('tcp_dst', '416', 3, 357, 6)
+in s3: 
+{'group_id': 124, 'tcp_dst': '416'}
+{'start': 18, 18: [('tcp_dst', '416', 3, 357, 6)], 3: [], 'end': []}
+start new at %d 18
+in s18: 
+normal to next ('udp_dst', '793', 4, 356, 331)
+in s4: 
+normal to next ('udp_src', '607', 3, 352, 17)
+in s3: 
+{'udp_src': '607', 'udp_dst': '793', 'group_id': 125}
+{'start': 18, 18: [('udp_dst', '793', 4, 356, 331), ('udp_src', '607', 3, 352, 17)], 3: [], 'end': [], 4: []}
+start new at %d 18
+in s18: 
+normal to next ('tcp_src', '80', 3, 353, 440)
+in s3: 
+same fv set  ('tcp_src', '80', 10, 53, 341)
+in s10: 
+same fv set  ('tcp_src', '80', 4, 183, 710)
+in s4: 
+same fv set  ('tcp_src', '80', 10, 72, 3)
+{'group_id': 126, 'tcp_src': '80'}
+{3: [('tcp_src', '80', 10, 53, 341)], 'end': [], 10: [('tcp_src', '80', 4, 183, 710)], 'start': 18, 18: [('tcp_src', '80', 3, 353, 440)], 4: [('tcp_src', '80', 10, 72, 3)]}
+start new at %d 18
+in s18: 
+normal to next ('udp_dst', '81', 19, 348, 421)
+in s19: 
+{'udp_dst': '81', 'group_id': 127}
+{'start': 18, 18: [('udp_dst', '81', 19, 348, 421)], 19: [], 'end': []}
+start new at %d 19
+in s19: 
+normal to next ('tcp_dst', '443', -14, 363, 379)
+{'group_id': 128, 'tcp_dst': '443'}
+{'start': 19, 19: [], 'end': []}
+start new at %d 19
+in s19: 
+normal to next ('udp_dst', '887', 17, 375, 397)
+in s17: 
+normal to next ('udp_src', '775', 18, 370, 45)
+in s18: 
+{'udp_src': '775', 'udp_dst': '887', 'group_id': 129}
+{'start': 19, 18: [], 19: [('udp_dst', '887', 17, 375, 397), ('udp_src', '775', 18, 370, 45)], 'end': [], 17: []}
+start new at %d 19
+in s19: 
+normal to next ('icmpv4_code', '225', 17, 372, 329)
+in s17: 
+normal to next ('icmpv4_type', '214', 18, 368, 48)
+in s18: 
+{'group_id': 130, 'icmpv4_code': '225', 'icmpv4_type': '214'}
+{'start': 19, 18: [], 19: [('icmpv4_code', '225', 17, 372, 329), ('icmpv4_type', '214', 18, 368, 48)], 'end': [], 17: []}
+start new at %d 19
+in s19: 
+normal to next ('icmpv4_code', '30', 17, 367, 395)
+in s17: 
+{'group_id': 131, 'icmpv4_code': '30'}
+{'start': 19, 19: [('icmpv4_code', '30', 17, 367, 395)], 'end': [], 17: []}
+start new at %d 19
+in s19: 
+normal to next ('tcp_src', '80', 17, 369, 458)
+in s17: 
+{'group_id': 132, 'tcp_src': '80'}
+{'start': 19, 19: [('tcp_src', '80', 17, 369, 458)], 'end': [], 17: []}
+start new at %d 19
+in s19: 
+normal to next ('icmpv4_code', '183', 17, 378, 745)
+in s17: 
+{'group_id': 133, 'icmpv4_code': '183'}
+{'start': 19, 19: [('icmpv4_code', '183', 17, 378, 745)], 'end': [], 17: []}
+start new at %d 20
+in s20: 
+normal to next ('ipv4_dst', '192.168.56.102', 18, 384, 793)
+in s18: 
+normal to next ('icmpv4_code', '36', 17, 390, 466)
+in s17: 
+normal to next ('ipv4_src', '192.168.56.8', -16, 398, 687)
+{'group_id': 134, 'icmpv4_code': '36', 'ipv4_dst': '192.168.56.102', 'ipv4_src': '192.168.56.8'}
+{'start': 20, 18: [], 'end': [], 20: [('ipv4_dst', '192.168.56.102', 18, 384, 793), ('icmpv4_code', '36', 17, 390, 466)], 17: []}
+start new at %d 20
+in s20: 
+normal to next ('icmpv4_code', '86', -16, 383, 104)
+{'group_id': 135, 'icmpv4_code': '86'}
+{'start': 20, 'end': [], 20: []}
+start new at %d 20
+in s20: 
+normal to next ('udp_dst', '69', 18, 399, 310)
+in s18: 
+normal to next ('eth_src', 'd2:b7:e8:80:29:64', 17, 386, 644)
+in s17: 
+{'eth_src': 'd2:b7:e8:80:29:64', 'udp_dst': '69', 'group_id': 136}
+{'start': 20, 18: [], 'end': [], 20: [('udp_dst', '69', 18, 399, 310), ('eth_src', 'd2:b7:e8:80:29:64', 17, 386, 644)], 17: []}
+start new at %d 20
+in s20: 
+normal to next ('ipv4_src', '192.168.56.218', 18, 397, 857)
+in s18: 
+normal to next ('udp_dst', '733', -15, 395, 832)
+{'udp_dst': '733', 'group_id': 137, 'ipv4_src': '192.168.56.218'}
+{'start': 20, 18: [], 'end': [], 20: [('ipv4_src', '192.168.56.218', 18, 397, 857)]}
+start new at %d 20
+in s20: 
+normal to next ('tcp_src', '80', 17, 381, 223)
+in s17: 
+normal to next ('eth_dst', 'b9:5c:c4:c7:ea:ad', 18, 389, 201)
+in s18: 
+same fv set  ('tcp_src', '80', 3, 353, 440)
+in s3: 
+same fv set  ('tcp_src', '80', 10, 53, 341)
+in s10: 
+same fv set  ('tcp_src', '80', 4, 183, 710)
+in s4: 
+same fv set  ('tcp_src', '80', 10, 72, 3)
+{'eth_dst': 'b9:5c:c4:c7:ea:ad', 'group_id': 138, 'tcp_src': '80'}
+{3: [('tcp_src', '80', 10, 53, 341)], 'end': [], 17: [], 10: [('tcp_src', '80', 4, 183, 710)], 'start': 20, 18: [('tcp_src', '80', 3, 353, 440)], 20: [('tcp_src', '80', 17, 381, 223), ('eth_dst', 'b9:5c:c4:c7:ea:ad', 18, 389, 201)], 4: [('tcp_src', '80', 10, 72, 3)]}
+start new at %d 20
+in s20: 
+normal to next ('icmpv4_code', '231', 17, 385, 588)
+in s17: 
+normal to next ('icmpv4_type', '198', 18, 387, 629)
+in s18: 
+{'group_id': 139, 'icmpv4_code': '231', 'icmpv4_type': '198'}
+{'start': 20, 18: [], 'end': [], 20: [('icmpv4_code', '231', 17, 385, 588), ('icmpv4_type', '198', 18, 387, 629)], 17: []}
+start new at %d 20
+in s20: 
+normal to next ('tcp_dst', '53', 18, 394, 376)
+in s18: 
+{'group_id': 140, 'tcp_dst': '53'}
+{'start': 20, 18: [], 'end': [], 20: [('tcp_dst', '53', 18, 394, 376)]}
+start new at %d 20
+in s20: 
+normal to next ('udp_dst', '879', 18, 400, 154)
+in s18: 
+{'udp_dst': '879', 'group_id': 141}
+{'start': 20, 18: [], 'end': [], 20: [('udp_dst', '879', 18, 400, 154)]}
+topology type:fat_tree_4
+---------------
+switch num:20
+link num:80
+total entry: 400
+total group: 142
+additional entry: 63
+Average link:4.000000 Effective aggregation rate: 2.816901
+Execution time: 0.759505
+Add entry wait time: 0.630000
+
+
+17 group with 1 entry
+44 group with 2 entry
+9 group with 3 entry
+24 group with 4 entry
+17 group with 5 entry
+9 group with 6 entry
+11 group with 7 entry
+5 group with 8 entry
+1 group with 9 entry
+1 group with 10 entry
+1 group with 11 entry
+2 group with 12 entry
+1 group with 13 entry
+Average entry in group: 3.880282
+[{1: [('icmpv4_type', '43', 5, 17, 794)],
+  5: [('eth_dst', 'd6:f9:18:a6:67:44', 8, 85, 323),
+      ('icmpv4_code', '78', 7, 89, 696)],
+  6: [],
+  7: [('ipv4_dst', '192.168.56.157', 6, 127, 545)],
+  8: [],
+  'end': [],
+  'start': 1},
+ {1: [('udp_dst', '668', 5, 20, 121)],
+  3: [('ipv4_dst', '192.168.56.251', 10, 55, 566)],
+  5: [('ipv4_src', '192.168.56.123', 8, 95, 870)],
+  6: [('eth_src', 'fe:a3:ab:1d:7b:68', 3, 109, 619)],
+  8: [('eth_dst', 'c2:d3:9:2f:ee:fb', 6, 149, 162)],
+  10: [('udp_src', '624', 11, 184, 518)],
+  11: [],
+  'end': [],
+  'start': 1},
+ {1: [('tcp_dst', '443', 13, 1, 122)],
+  2: [('eth_src', 'ca:15:2b:31:12:fc', 9, 34, 863),
+      ('ipv4_dst', '192.168.56.70', 5, 23, 146)],
+  5: [('tcp_dst', '443', 2, 97, 476)],
+  9: [('tcp_dst', '443', 1, 164, 301),
+      ('eth_dst', 'c4:7f:27:a4:3b:96', 11, 180, 772)],
+  11: [('eth_dst', 'c4:7f:27:a4:3b:96', 9, 203, 796)],
+  13: [('tcp_dst', '443', 1, 246, 32), ('tcp_src', '340', 2, 252, 544)],
+  'end': [],
+  'start': 1},
+ {1: [('tcp_src', '443', 17, 16, 153)],
+  2: [('tcp_src', '443', 5, 31, 503)],
+  5: [('tcp_dst', '546', 7, 87, 337)],
+  6: [('tcp_src', '443', 7, 119, 775),
+      ('ipv4_dst', '192.168.56.170', 8, 112, 134)],
+  7: [('tcp_src', '443', 6, 136, 144)],
+  8: [],
+  17: [('eth_src', '75:c6:28:f5:ab:b8', 20, 338, 455),
+       ('eth_dst', 'df:65:d2:8e:f:52', 2, 323, 113),
+       ('ipv4_src', '192.168.56.216', 19, 330, 785)],
+  19: [],
+  20: [],
+  'end': [],
+  'start': 1},
+ {1: [('icmpv4_code', '1', 5, 2, 972),
+      ('ipv4_src', '192.168.56.165', 17, 12, 210)],
+  5: [('eth_src', 'c4:2b:6a:7:e0:42', 8, 90, 728),
+      ('eth_dst', 'a0:b:68:1b:f4:77', 7, 98, 898)],
+  7: [],
+  8: [],
+  17: [('icmpv4_type', '44', 20, 328, 77)],
+  20: [],
+  'end': [],
+  'start': 1},
+ {1: [('udp_src', '700', 5, 15, 132)],
+  5: [('eth_src', 'a6:6e:16:7:2e:37', 8, 81, 628),
+      ('eth_dst', '75:b6:df:d9:10:5a', 7, 82, 34)],
+  6: [],
+  7: [('ipv4_src', '192.168.56.209', 6, 140, 449)],
+  8: [],
+  'end': [],
+  'start': 1},
+ {1: [('udp_dst', '407', 17, 13, 431)],
+  3: [],
+  4: [('udp_src', '346', 14, 69, 434)],
+  14: [('ipv4_dst', '192.168.56.46', 3, 268, 913)],
+  17: [('ipv4_src', '192.168.56.55', 19, 326, 991)],
+  18: [('eth_dst', 'b4:ee:ba:af:ce:dd', 4, 342, 297)],
+  19: [('eth_src', 'b1:1c:fe:8a:ea:96', 18, 366, 903)],
+  'end': [],
+  'start': 1},
+ {1: [('udp_src', '268', 9, 10, 199)],
+  2: [('eth_dst', '1f:1f:74:67:28:48', 13, 38, 566)],
+  4: [('ipv4_dst', '192.168.56.197', 18, 74, 232)],
+  9: [('udp_dst', '548', 2, 173, 549)],
+  13: [('ipv4_dst', '192.168.56.197', 15, 245, 417)],
+  14: [('ipv4_src', '192.168.56.182', 4, 278, 577)],
+  15: [('eth_src', '86:c3:85:7c:c2:23', 14, 281, 537)],
+  18: [],
+  'end': [],
+  'start': 1},
+ {1: [('tcp_dst', '22', 9, 4, 178)],
+  2: [],
+  9: [('eth_src', '86:47:76:d3:74:84', 11, 166, 834),
+      ('ipv4_dst', '192.168.56.41', 2, 162, 642)],
+  11: [],
+  'end': [],
+  'start': 1},
+ {1: [('icmpv4_code', '184', 17, 19, 651)],
+  3: [('icmpv4_code', '184', 6, 49, 45), ('icmpv4_type', '196', 14, 60, 703)],
+  6: [('eth_dst', '19:48:8e:52:81:5d', 8, 106, 821)],
+  8: [],
+  14: [],
+  17: [('ipv4_dst', '192.168.56.17', 19, 335, 776),
+       ('eth_src', '28:db:92:76:d3:9f', 20, 324, 984)],
+  18: [('eth_dst', '19:48:8e:52:81:5d', 3, 360, 599)],
+  19: [],
+  20: [('eth_dst', '19:48:8e:52:81:5d', 18, 382, 376)],
+  'end': [],
+  'start': 1},
+ {1: [('eth_dst', '1b:3:48:2b:b7:b6', 9, 9, 336),
+      ('eth_src', 'a9:9a:3c:5b:e2:b2', 17, 8, 25)],
+  2: [('icmpv4_code', '171', 13, 36, 769)],
+  9: [('icmpv4_type', '147', 12, 175, 559),
+      ('ipv4_src', '192.168.56.190', 2, 177, 365)],
+  12: [],
+  13: [],
+  17: [],
+  'end': [],
+  'start': 1},
+ {1: [('udp_src', '864', 13, 3, 979)],
+  2: [('udp_dst', '521', 5, 35, 767),
+      ('eth_src', '33:a2:94:56:e1:b5', 9, 21, 496)],
+  5: [('udp_src', '864', 2, 99, 179)],
+  9: [('ipv4_dst', '192.168.56.80', 11, 163, 186)],
+  11: [],
+  13: [('eth_dst', 'e8:48:3d:6b:52:6e', 2, 247, 646)],
+  'end': [],
+  'start': 1},
+ {1: [('udp_src', '305', 17, 14, 956)],
+  17: [('ipv4_dst', '192.168.56.44', 19, 340, 15),
+       ('udp_dst', '562', 20, 331, 558)],
+  18: [],
+  19: [],
+  20: [('ipv4_dst', '192.168.56.44', 18, 396, 291)],
+  'end': [],
+  'start': 1},
+ {1: [('udp_dst', '901', 9, 5, 714)],
+  9: [('eth_src', 'be:9f:c8:a3:ac:7c', 12, 172, 854)],
+  10: [('ipv4_src', '192.168.56.73', 11, 192, 713)],
+  11: [],
+  12: [('ipv4_dst', '192.168.56.181', 10, 225, 320)],
+  'end': [],
+  'start': 1},
+ {1: [('icmpv4_code', '84', 9, 6, 398)],
+  9: [('icmpv4_type', '105', 12, 168, 469),
+      ('ipv4_dst', '192.168.56.187', 11, 170, 636)],
+  11: [],
+  12: [],
+  'end': [],
+  'start': 1},
+ {1: [('udp_dst', '940', 17, 7, 719)],
+  2: [('udp_dst', '940', 13, 27, 573)],
+  13: [('ipv4_src', '192.168.56.183', 16, 258, 25)],
+  16: [],
+  17: [('udp_src', '127', 2, 329, 928),
+       ('eth_src', 'df:22:68:1f:40:6d', 19, 339, 932)],
+  19: [],
+  'end': [],
+  'start': 1},
+ {1: [('icmpv4_code', '193', 9, 18, 382),
+      ('ipv4_dst', '192.168.56.172', 5, 11, 844)],
+  5: [],
+  9: [('icmpv4_type', '85', 12, 169, 867)],
+  12: [],
+  'end': [],
+  'start': 1},
+ {1: [],
+  2: [('icmpv4_type', '166', 5, 37, 342)],
+  5: [('ipv4_src', '192.168.56.66', 1, 84, 450),
+      ('icmpv4_code', '25', 8, 94, 854)],
+  6: [('eth_dst', 'd7:9b:8d:81:59:a0', 7, 113, 24)],
+  7: [],
+  8: [('ipv4_dst', '192.168.56.62', 6, 160, 28)],
+  'end': [],
+  'start': 2},
+ {1: [],
+  2: [('tcp_dst', '80', 5, 33, 649), ('tcp_src', '23', 9, 26, 781)],
+  5: [('tcp_dst', '80', 1, 93, 219)],
+  9: [('tcp_dst', '80', 2, 179, 992)],
+  'end': [],
+  'start': 2},
+ {1: [],
+  2: [('udp_src', '289', 5, 32, 63),
+      ('eth_dst', '37:8:4a:68:72:9a', 9, 39, 501)],
+  5: [('udp_dst', '627', 1, 100, 690)],
+  9: [],
+  'end': [],
+  'start': 2},
+ {1: [('icmpv4_code', '184', 17, 19, 651)],
+  2: [('icmpv4_type', '243', 5, 28, 210), ('icmpv4_code', '184', 9, 24, 27)],
+  5: [],
+  9: [('eth_dst', 'c6:1:62:5c:d0:4e', 1, 174, 556)],
+  17: [],
+  'end': [],
+  'start': 2},
+ {1: [('ipv4_dst', '192.168.56.172', 5, 11, 844)],
+  2: [('ipv4_dst', '192.168.56.172', 17, 30, 883)],
+  5: [],
+  17: [('udp_src', '724', 1, 321, 664)],
+  'end': [],
+  'start': 2},
+ {2: [('udp_dst', '316', 13, 25, 375)],
+  4: [('ipv4_src', '192.168.56.84', 18, 66, 674)],
+  13: [('udp_src', '374', 16, 244, 507)],
+  14: [('eth_src', '6d:30:d3:93:6f:cc', 4, 270, 280)],
+  16: [('eth_dst', 'ce:bb:ba:21:c6:f6', 14, 305, 564)],
+  18: [],
+  'end': [],
+  'start': 2},
+ {2: [('icmpv4_type', '43', 5, 40, 773)], 5: [], 'end': [], 'start': 2},
+ {1: [],
+  2: [('tcp_src', '80', 9, 29, 89)],
+  9: [('tcp_src', '80', 1, 165, 733)],
+  'end': [],
+  'start': 2},
+ {1: [('udp_dst', '407', 17, 13, 431)],
+  2: [('udp_dst', '407', 17, 22, 551)],
+  17: [('udp_src', '392', 19, 334, 576),
+       ('ipv4_dst', '192.168.56.107', 1, 337, 390)],
+  19: [],
+  'end': [],
+  'start': 2},
+ {1: [('eth_dst', '1b:3:48:2b:b7:b6', 9, 9, 336)],
+  2: [('tcp_dst', '80', 5, 33, 649)],
+  3: [('eth_dst', '1b:3:48:2b:b7:b6', 18, 58, 131)],
+  4: [('eth_src', 'bd:d0:ea:83:d5:ee', 10, 61, 849)],
+  5: [('tcp_dst', '80', 1, 93, 219)],
+  9: [('tcp_dst', '80', 2, 179, 992)],
+  10: [('tcp_src', '20', 11, 181, 144)],
+  11: [('tcp_dst', '80', 9, 215, 660)],
+  17: [('tcp_dst', '80', 1, 325, 128)],
+  18: [('tcp_dst', '80', 19, 347, 347),
+       ('ipv4_dst', '192.168.56.208', 4, 358, 689)],
+  19: [('tcp_dst', '80', 17, 362, 674)],
+  'end': [],
+  'start': 3},
+ {1: [],
+  3: [('udp_src', '994', 6, 48, 775),
+      ('ipv4_src', '192.168.56.48', 18, 59, 881)],
+  5: [('udp_dst', '316', 1, 92, 210)],
+  6: [('eth_src', '4a:d9:85:28:c7:fc', 8, 104, 523)],
+  8: [('ipv4_dst', '192.168.56.143', 5, 158, 231)],
+  18: [],
+  'end': [],
+  'start': 3},
+ {1: [('tcp_dst', '443', 13, 1, 122)],
+  2: [('eth_dst', '1f:1f:74:67:28:48', 13, 38, 566)],
+  3: [('eth_dst', '1f:1f:74:67:28:48', 18, 57, 456)],
+  13: [('tcp_dst', '443', 1, 246, 32),
+       ('eth_src', 'a9:29:8:d3:2f:12', 2, 255, 269)],
+  17: [('tcp_src', '43', 1, 333, 146)],
+  18: [('tcp_dst', '443', 20, 343, 508)],
+  20: [('ipv4_src', '192.168.56.32', 17, 392, 845)],
+  'end': [],
+  'start': 3},
+ {3: [('udp_src', '488', 10, 41, 604)],
+  4: [('ipv4_src', '192.168.56.13', 14, 67, 891)],
+  10: [('udp_dst', '627', 12, 193, 4),
+       ('ipv4_dst', '192.168.56.44', 4, 196, 411)],
+  12: [],
+  14: [('eth_src', 'ab:d4:63:a0:a8:c9', 16, 280, 889)],
+  16: [],
+  'end': [],
+  'start': 3},
+ {3: [('icmpv4_type', '58', 10, 50, 346)],
+  9: [],
+  10: [('ipv4_dst', '192.168.56.93', 12, 189, 16)],
+  12: [('icmpv4_code', '1', 9, 235, 558)],
+  'end': [],
+  'start': 3},
+ {3: [('udp_dst', '521', 6, 52, 96)],
+  5: [],
+  6: [('udp_src', '893', 8, 101, 211),
+      ('eth_dst', '37:8:4a:68:72:9a', 7, 115, 154)],
+  7: [],
+  8: [('ipv4_src', '192.168.56.22', 5, 153, 155)],
+  'end': [],
+  'start': 3},
+ {3: [('udp_dst', '786', 14, 44, 602),
+      ('eth_src', '86:47:76:d3:74:84', 10, 47, 56)],
+  4: [('udp_dst', '786', 6, 64, 196)],
+  5: [],
+  6: [('eth_dst', 'ce:9b:c3:59:e8:8e', 7, 103, 245)],
+  7: [('ipv4_dst', '192.168.56.172', 5, 124, 757)],
+  10: [],
+  14: [('ipv4_src', '192.168.56.41', 16, 266, 304),
+       ('udp_src', '570', 4, 275, 623)],
+  16: [],
+  'end': [],
+  'start': 3},
+ {1: [('tcp_dst', '22', 9, 4, 178)],
+  3: [('tcp_src', '80', 10, 53, 341)],
+  4: [('tcp_src', '80', 10, 72, 3),
+      ('tcp_dst', '22', 6, 62, 148),
+      ('eth_dst', 'a6:19:58:d7:9:47', 14, 80, 582)],
+  6: [('tcp_src', '80', 4, 116, 317),
+      ('ipv4_dst', '192.168.56.131', 7, 117, 878)],
+  7: [],
+  9: [('tcp_src', '80', 1, 165, 733)],
+  10: [('tcp_src', '80', 4, 183, 710),
+       ('eth_src', '33:a2:94:56:e1:b5', 12, 198, 888)],
+  12: [('tcp_src', '80', 9, 234, 163)],
+  14: [('eth_dst', 'a6:19:58:d7:9:47', 4, 277, 659)],
+  'end': [],
+  'start': 3},
+ {3: [('tcp_src', '402', 10, 42, 572)],
+  10: [('eth_src', '3f:c6:1c:6d:58:fb', 12, 199, 301),
+       ('ipv4_dst', '192.168.56.233', 11, 200, 777)],
+  11: [],
+  12: [],
+  'end': [],
+  'start': 3},
+ {3: [('icmpv4_code', '25', 6, 46, 930)],
+  4: [('ipv4_dst', '192.168.56.215', 18, 71, 309)],
+  6: [('eth_dst', '2:4c:af:13:5f:fd', 4, 107, 248)],
+  17: [],
+  18: [('eth_src', 'c4:2b:6a:7:e0:42', 19, 341, 24),
+       ('icmpv4_type', '115', 20, 359, 62)],
+  19: [('ipv4_src', '192.168.56.165', 17, 380, 265)],
+  20: [],
+  'end': [],
+  'start': 3},
+ {3: [('tcp_src', '487', 6, 43, 718),
+      ('eth_src', 'be:9f:c8:a3:ac:7c', 18, 45, 970)],
+  6: [],
+  18: [('eth_dst', '59:79:c3:a9:cb:4e', 19, 349, 363)],
+  19: [],
+  'end': [],
+  'start': 3},
+ {3: [('udp_dst', '21', 6, 51, 544)],
+  4: [('eth_dst', '82:eb:bc:69:f2:c3', 10, 76, 30)],
+  6: [('udp_src', '253', 4, 105, 639)],
+  10: [('eth_src', '17:82:ba:e7:7a:4', 12, 185, 904)],
+  12: [],
+  'end': [],
+  'start': 3},
+ {3: [('udp_dst', '617', 10, 56, 814)],
+  10: [('udp_src', '269', 11, 186, 57)],
+  11: [],
+  'end': [],
+  'start': 3},
+ {3: [('udp_dst', '1012', 18, 54, 713)],
+  4: [('udp_dst', '1012', 6, 77, 314)],
+  6: [],
+  17: [],
+  18: [('ipv4_src', '192.168.56.56', 19, 355, 656),
+       ('udp_src', '191', 4, 345, 557)],
+  19: [('eth_dst', '6:19:10:13:d9:36', 17, 364, 325)],
+  'end': [],
+  'start': 3},
+ {4: [('icmpv4_code', '207', 14, 79, 368)],
+  14: [('icmpv4_type', '5', 16, 264, 90),
+       ('eth_dst', '1d:8f:16:9f:bb:d2', 15, 263, 139)],
+  15: [],
+  16: [],
+  'end': [],
+  'start': 4},
+ {3: [],
+  4: [('icmpv4_type', '44', 18, 70, 1000)],
+  17: [('icmpv4_type', '44', 20, 328, 77)],
+  18: [('eth_src', '2d:1b:d:7f:23:68', 3, 350, 115),
+       ('icmpv4_code', '110', 19, 344, 472)],
+  19: [('eth_dst', 'c7:43:90:c2:4c:b7', 17, 373, 173)],
+  20: [('eth_src', '2d:1b:d:7f:23:68', 18, 393, 574)],
+  'end': [],
+  'start': 4},
+ {3: [],
+  4: [('ipv4_src', '192.168.56.22', 10, 65, 268)],
+  10: [('ipv4_dst', '192.168.56.143', 3, 191, 815),
+       ('udp_dst', '632', 12, 188, 981)],
+  12: [],
+  'end': [],
+  'start': 4},
+ {4: [('udp_dst', '570', 6, 78, 256)], 6: [], 'end': [], 'start': 4},
+ {3: [],
+  4: [('eth_src', '4a:d9:85:28:c7:fc', 10, 63, 155),
+      ('icmpv4_code', '8', 18, 68, 722)],
+  10: [('eth_dst', 'df:65:d2:8e:f:52', 3, 194, 336)],
+  18: [('ipv4_dst', '192.168.56.172', 19, 351, 938)],
+  19: [],
+  'end': [],
+  'start': 4},
+ {4: [('icmpv4_code', '129', 18, 73, 333)], 18: [], 'end': [], 'start': 4},
+ {3: [],
+  4: [('udp_dst', '735', 14, 75, 471)],
+  14: [('udp_src', '856', 3, 267, 800)],
+  'end': [],
+  'start': 4},
+ {1: [],
+  2: [],
+  5: [('icmpv4_type', '202', 1, 96, 525), ('icmpv4_code', '49', 2, 88, 791)],
+  'end': [],
+  'start': 5},
+ {2: [], 5: [('udp_src', '84', 2, 91, 183)], 'end': [], 'start': 5},
+ {5: [('tcp_src', '80', 7, 83, 152), ('tcp_dst', '22', 8, 86, 296)],
+  7: [],
+  8: [],
+  'end': [],
+  'start': 5},
+ {3: [],
+  6: [('icmpv4_type', '96', 3, 118, 174), ('icmpv4_code', '70', 8, 102, 398)],
+  8: [],
+  'end': [],
+  'start': 6},
+ {6: [('udp_dst', '115', 8, 111, 798)], 8: [], 'end': [], 'start': 6},
+ {3: [], 6: [('udp_dst', '735', 3, 108, 497)], 'end': [], 'start': 6},
+ {6: [('udp_dst', '319', 8, 114, 972)], 8: [], 'end': [], 'start': 6},
+ {6: [('udp_dst', '940', 8, 120, 246)], 8: [], 'end': [], 'start': 6},
+ {3: [], 6: [('tcp_dst', '80', 3, 110, 15)], 'end': [], 'start': 6},
+ {5: [],
+  6: [],
+  7: [('icmpv4_type', '105', 5, 137, 93),
+      ('eth_dst', '12:67:b8:ef:fb:91', 6, 131, 543)],
+  'end': [],
+  'start': 7},
+ {7: [], 'end': [], 'start': 7},
+ {5: [],
+  6: [],
+  7: [('udp_src', '991', 5, 135, 322),
+      ('ipv4_dst', '192.168.56.79', 6, 130, 750)],
+  'end': [],
+  'start': 7},
+ {5: [],
+  6: [('eth_src', '4a:d9:85:28:c7:fc', 8, 104, 523)],
+  7: [('icmpv4_code', '140', 5, 123, 594),
+      ('eth_src', '4a:d9:85:28:c7:fc', 6, 133, 807)],
+  8: [],
+  'end': [],
+  'start': 7},
+ {1: [],
+  3: [],
+  5: [('tcp_dst', '80', 1, 93, 219)],
+  6: [('tcp_dst', '80', 3, 110, 15)],
+  7: [('tcp_dst', '80', 6, 139, 830),
+      ('eth_dst', 'c6:1:62:5c:d0:4e', 5, 138, 237)],
+  'end': [],
+  'start': 7},
+ {7: [], 'end': [], 'start': 7},
+ {5: [], 7: [('udp_src', '951', 5, 126, 59)], 'end': [], 'start': 7},
+ {7: [], 'end': [], 'start': 7},
+ {6: [], 7: [('tcp_src', '110', 6, 129, 256)], 'end': [], 'start': 7},
+ {5: [],
+  6: [],
+  8: [('icmpv4_code', '207', 5, 150, 849),
+      ('icmpv4_type', '65', 6, 152, 243)],
+  'end': [],
+  'start': 8},
+ {5: [],
+  6: [],
+  8: [('tcp_dst', '173', 5, 143, 224),
+      ('ipv4_dst', '192.168.56.79', 6, 145, 460)],
+  'end': [],
+  'start': 8},
+ {5: [],
+  6: [],
+  8: [('tcp_src', '622', 5, 154, 916),
+      ('eth_dst', '12:67:b8:ef:fb:91', 6, 147, 467)],
+  'end': [],
+  'start': 8},
+ {8: [], 'end': [], 'start': 8},
+ {5: [],
+  8: [('ipv4_dst', '192.168.56.131', 5, 146, 329)],
+  'end': [],
+  'start': 8},
+ {5: [], 8: [('icmpv4_code', '143', 5, 148, 377)], 'end': [], 'start': 8},
+ {3: [],
+  9: [('tcp_src', '443', 11, 167, 648)],
+  10: [('tcp_dst', '926', 3, 182, 773)],
+  11: [('tcp_src', '443', 10, 216, 672)],
+  'end': [],
+  'start': 9},
+ {9: [('icmpv4_code', '59', 12, 171, 199)],
+  10: [],
+  12: [('icmpv4_type', '222', 10, 223, 753)],
+  'end': [],
+  'start': 9},
+ {9: [('udp_dst', '635', 12, 176, 754)],
+  10: [],
+  12: [('udp_src', '133', 10, 233, 201)],
+  'end': [],
+  'start': 9},
+ {1: [], 9: [('udp_src', '638', 1, 178, 987)], 'end': [], 'start': 9},
+ {9: [('udp_src', '725', 11, 161, 740)],
+  10: [],
+  11: [('ipv4_dst', '192.168.56.188', 10, 202, 911)],
+  'end': [],
+  'start': 9},
+ {4: [], 10: [('icmpv4_type', '139', 4, 190, 47)], 'end': [], 'start': 10},
+ {4: [], 10: [('icmpv4_type', '202', 4, 187, 441)], 'end': [], 'start': 10},
+ {4: [], 10: [('icmpv4_code', '31', 4, 197, 475)], 'end': [], 'start': 10},
+ {4: [], 10: [('icmpv4_type', '64', 4, 195, 765)], 'end': [], 'start': 10},
+ {11: [], 'end': [], 'start': 11},
+ {9: [],
+  10: [],
+  11: [('icmpv4_type', '73', 9, 213, 167),
+       ('icmpv4_code', '241', 10, 208, 51)],
+  'end': [],
+  'start': 11},
+ {11: [], 'end': [], 'start': 11},
+ {9: [], 11: [('udp_src', '93', 9, 219, 731)], 'end': [], 'start': 11},
+ {10: [], 11: [('tcp_dst', '443', 10, 206, 263)], 'end': [], 'start': 11},
+ {11: [], 'end': [], 'start': 11},
+ {10: [], 12: [('udp_dst', '463', 10, 240, 171)], 'end': [], 'start': 12},
+ {10: [], 12: [('udp_dst', '554', 10, 224, 435)], 'end': [], 'start': 12},
+ {12: [], 'end': [], 'start': 12},
+ {1: [],
+  2: [('tcp_dst', '80', 5, 33, 649)],
+  5: [('tcp_dst', '80', 1, 93, 219)],
+  9: [('tcp_dst', '80', 2, 179, 992)],
+  10: [],
+  12: [('tcp_src', '110', 10, 230, 482), ('tcp_dst', '80', 9, 239, 218)],
+  'end': [],
+  'start': 12},
+ {12: [], 'end': [], 'start': 12},
+ {10: [], 12: [('udp_dst', '366', 10, 231, 873)], 'end': [], 'start': 12},
+ {9: [],
+  10: [],
+  12: [('udp_dst', '1009', 9, 227, 162), ('udp_src', '337', 10, 237, 536)],
+  'end': [],
+  'start': 12},
+ {1: [],
+  2: [],
+  13: [('udp_dst', '634', 1, 243, 14),
+       ('ipv4_src', '192.168.56.132', 2, 254, 654),
+       ('udp_src', '556', 15, 260, 852)],
+  15: [],
+  'end': [],
+  'start': 13},
+ {13: [('tcp_src', '80', 15, 242, 661), ('tcp_dst', '80', 16, 241, 434)],
+  14: [('tcp_dst', '80', 15, 269, 201)],
+  15: [('tcp_src', '80', 13, 288, 503)],
+  16: [('eth_dst', '6b:85:54:9d:17:95', 14, 304, 223)],
+  'end': [],
+  'start': 13},
+ {2: [],
+  13: [('icmpv4_code', '77', 15, 256, 708),
+       ('ipv4_src', '192.168.56.234', 2, 259, 896)],
+  15: [],
+  'end': [],
+  'start': 13},
+ {4: [('udp_dst', '1012', 6, 77, 314)],
+  6: [],
+  13: [('udp_dst', '1012', 15, 250, 637)],
+  14: [('udp_src', '295', 4, 274, 565)],
+  15: [('eth_src', '27:6c:f1:ab:8e:cd', 14, 283, 850)],
+  'end': [],
+  'start': 13},
+ {13: [('udp_dst', '627', 15, 253, 215)],
+  14: [],
+  15: [('udp_src', '564', 14, 294, 185)],
+  'end': [],
+  'start': 13},
+ {13: [('tcp_src', '443', 16, 251, 279)], 16: [], 'end': [], 'start': 13},
+ {4: [],
+  13: [('icmpv4_code', '150', 16, 257, 870)],
+  14: [('icmpv4_type', '34', 4, 271, 268)],
+  16: [('eth_src', '3f:c6:1c:6d:58:fb', 14, 317, 709)],
+  'end': [],
+  'start': 13},
+ {1: [], 13: [('icmpv4_code', '202', 1, 248, 755)], 'end': [], 'start': 13},
+ {13: [('udp_dst', '824', 15, 249, 675)], 15: [], 'end': [], 'start': 13},
+ {13: [],
+  14: [('tcp_dst', '156', 15, 262, 315), ('tcp_src', '25', 16, 276, 90)],
+  15: [('eth_src', 'b7:80:25:df:12:a6', 13, 291, 34)],
+  16: [],
+  'end': [],
+  'start': 14},
+ {4: [],
+  13: [],
+  14: [('tcp_dst', '416', 4, 273, 286), ('tcp_src', '142', 16, 265, 436)],
+  16: [('eth_dst', '9c:61:35:70:61:ae', 13, 306, 849)],
+  'end': [],
+  'start': 14},
+ {13: [],
+  14: [('icmpv4_code', '174', 15, 261, 825)],
+  15: [('eth_dst', '1c:58:83:a5:78:7d', 13, 293, 925)],
+  'end': [],
+  'start': 14},
+ {14: [('icmpv4_type', '125', 15, 272, 51)], 15: [], 'end': [], 'start': 14},
+ {14: [('tcp_dst', '443', 16, 279, 79)], 16: [], 'end': [], 'start': 14},
+ {14: [], 15: [('icmpv4_code', '1', 14, 287, 284)], 'end': [], 'start': 15},
+ {13: [], 15: [('udp_src', '12', 13, 290, 640)], 'end': [], 'start': 15},
+ {15: [], 'end': [], 'start': 15},
+ {14: [], 15: [('icmpv4_code', '59', 14, 284, 655)], 'end': [], 'start': 15},
+ {16: [], 'end': [], 'start': 16},
+ {16: [], 'end': [], 'start': 16},
+ {16: [], 'end': [], 'start': 16},
+ {13: [], 16: [('icmpv4_type', '228', 13, 307, 676)], 'end': [], 'start': 16},
+ {16: [], 'end': [], 'start': 16},
+ {13: [], 16: [('tcp_src', '546', 13, 313, 420)], 'end': [], 'start': 16},
+ {14: [], 16: [('icmpv4_code', '10', 14, 308, 338)], 'end': [], 'start': 16},
+ {13: [], 16: [('icmpv4_code', '226', 13, 316, 616)], 'end': [], 'start': 16},
+ {16: [], 'end': [], 'start': 16},
+ {1: [],
+  2: [],
+  17: [('udp_dst', '26', 1, 336, 703),
+       ('ipv4_src', '192.168.56.133', 2, 327, 786)],
+  'end': [],
+  'start': 17},
+ {17: [('icmpv4_code', '140', 19, 322, 145)],
+  18: [],
+  19: [('eth_src', 'f2:28:f3:df:d:60', 18, 374, 876)],
+  'end': [],
+  'start': 17},
+ {3: [],
+  17: [('icmpv4_type', '250', 19, 332, 632)],
+  18: [('icmpv4_code', '42', 3, 346, 578)],
+  19: [('ipv4_src', '192.168.56.240', 18, 377, 310)],
+  'end': [],
+  'start': 17},
+ {3: [], 18: [('udp_dst', '541', 3, 354, 964)], 'end': [], 'start': 18},
+ {3: [], 18: [('tcp_dst', '416', 3, 357, 6)], 'end': [], 'start': 18},
+ {3: [],
+  4: [],
+  18: [('udp_dst', '793', 4, 356, 331), ('udp_src', '607', 3, 352, 17)],
+  'end': [],
+  'start': 18},
+ {3: [('tcp_src', '80', 10, 53, 341)],
+  4: [('tcp_src', '80', 10, 72, 3)],
+  10: [('tcp_src', '80', 4, 183, 710)],
+  18: [('tcp_src', '80', 3, 353, 440)],
+  'end': [],
+  'start': 18},
+ {18: [('udp_dst', '81', 19, 348, 421)], 19: [], 'end': [], 'start': 18},
+ {19: [], 'end': [], 'start': 19},
+ {17: [],
+  18: [],
+  19: [('udp_dst', '887', 17, 375, 397), ('udp_src', '775', 18, 370, 45)],
+  'end': [],
+  'start': 19},
+ {17: [],
+  18: [],
+  19: [('icmpv4_code', '225', 17, 372, 329),
+       ('icmpv4_type', '214', 18, 368, 48)],
+  'end': [],
+  'start': 19},
+ {17: [], 19: [('icmpv4_code', '30', 17, 367, 395)], 'end': [], 'start': 19},
+ {17: [], 19: [('tcp_src', '80', 17, 369, 458)], 'end': [], 'start': 19},
+ {17: [], 19: [('icmpv4_code', '183', 17, 378, 745)], 'end': [], 'start': 19},
+ {17: [],
+  18: [],
+  20: [('ipv4_dst', '192.168.56.102', 18, 384, 793),
+       ('icmpv4_code', '36', 17, 390, 466)],
+  'end': [],
+  'start': 20},
+ {20: [], 'end': [], 'start': 20},
+ {17: [],
+  18: [],
+  20: [('udp_dst', '69', 18, 399, 310),
+       ('eth_src', 'd2:b7:e8:80:29:64', 17, 386, 644)],
+  'end': [],
+  'start': 20},
+ {18: [],
+  20: [('ipv4_src', '192.168.56.218', 18, 397, 857)],
+  'end': [],
+  'start': 20},
+ {3: [('tcp_src', '80', 10, 53, 341)],
+  4: [('tcp_src', '80', 10, 72, 3)],
+  10: [('tcp_src', '80', 4, 183, 710)],
+  17: [],
+  18: [('tcp_src', '80', 3, 353, 440)],
+  20: [('tcp_src', '80', 17, 381, 223),
+       ('eth_dst', 'b9:5c:c4:c7:ea:ad', 18, 389, 201)],
+  'end': [],
+  'start': 20},
+ {17: [],
+  18: [],
+  20: [('icmpv4_code', '231', 17, 385, 588),
+       ('icmpv4_type', '198', 18, 387, 629)],
+  'end': [],
+  'start': 20},
+ {18: [], 20: [('tcp_dst', '53', 18, 394, 376)], 'end': [], 'start': 20},
+ {18: [], 20: [('udp_dst', '879', 18, 400, 154)], 'end': [], 'start': 20}]

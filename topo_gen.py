@@ -1,45 +1,81 @@
 #!/usr/bin/python
 from mininet.net import Mininet
-from mininet.node import Controller, RemoteController, OVSController
-from mininet.node import CPULimitedHost, Host, Node
-from mininet.node import OVSKernelSwitch, UserSwitch
-from mininet.node import IVSSwitch
+from mininet.node import *
 from mininet.cli import CLI
 from mininet.log import setLogLevel, info
-from mininet.link import TCLink, Intf
+from mininet.link import *
+from mininet.util import *
+from mininet.topo import *
+
+import fnss
+import networkx
 import random 
 import os.path
 import sys
 
-config_file = 'test'
-f = open('config/'+config_file,'r')
-content = f.read().split(',')
-SWITCH_NUM, LINK_NUM, FLOW_NUM = int(content[0]), int(content[1]), int(content[2])
-#config file format: switch_number, link_number, flow_entry_number
+config_file = 'fat_tree_4'
 
-def flow_entry_gen(port_count):	#port count = the port that each switch have
+def flow_entry_gen(SWITCH_NUM,ENTRY_FACTOR,tier_type,port_to_switch):	#port count = the port that each switch have
 	#[3,2,4,2,1]	s1 has 3 ports, s2 has 2, and so on
-	global SWITCH_NUM
-	global FLOW_NUM
+	used = set() #(located_switch,match_field,match_value)
+	tot_entry = 0
+	global config_file
+
 	if not os.path.isfile('config/'+config_file+'.entry'):	#generate flow entries if it doesn't exist
 		print "pre-install entry config file doesn't exist, random generating..."	
-		field_set = ['eth_dst','eth_src','ipv4_src','ipv4_dst','ipv6_src','ipv6_dst','tcp_src',
-		'tcp_dst','udp_src','udp_dst','icmpv4_type','icmpv4_code','icmpv6_type','icmpv6_code']
-		#'in_port' later because its different
+		field_set = ['eth_dst','eth_src','ipv4_src','ipv4_dst','tcp_src','tcp_dst','udp_src','udp_dst','icmpv4_type','icmpv4_code']
 		f = open('config/'+config_file+'.entry','w')
-		for switch in xrange(1,SWITCH_NUM+1):
-			used = set()
-			for a in xrange(FLOW_NUM):
-				out_port = str(random.randint(1,port_count[switch-1]))
+		for switch in port_to_switch:
+			used_this_switch = set()
+			if tier_type[switch-1] == 'core':
+				FLOW_PER_SWITCH = ENTRY_FACTOR
+			elif tier_type[switch-1] == 'aggregation':
+				FLOW_PER_SWITCH = ENTRY_FACTOR
+			elif tier_type[switch-1] == 'edge':
+				FLOW_PER_SWITCH = ENTRY_FACTOR
+			tot_entry += FLOW_PER_SWITCH
+			ports = []
+			
+			for port in port_to_switch[switch]:
+				dst_str = port_to_switch[switch][port]
+				if dst_str[0] == 'h':
+					dst_tier_type = 'leaf'
+				else:
+					dst_tier_type = tier_type[int(dst_str[1:])-1]
+				ports.append(port)
+				'''if config_file[:8] == 'two_tier':
+					if tier_type[switch-1] == 'core' and dst_tier_type == 'edge':
+						ports.append(port)
+					elif tier_type[switch-1] == 'edge' and dst_tier_type == 'leaf':
+						ports.append(port)
+				else:
+					if tier_type[switch-1] == 'core' and dst_tier_type == 'aggregation':
+						ports.append(port)
+					elif tier_type[switch-1] == 'aggregation' and dst_tier_type == 'edge':
+						ports.append(port)
+					elif tier_type[switch-1] == 'edge' and dst_tier_type == 'leaf':
+						ports.append(port)
+				'''
+			a = 0
+			while a < FLOW_PER_SWITCH:
+				out_port = str(random.choice(ports))
 				field = random.choice(field_set)
+				dup = random.randint(0,5)	#=0 -> duplicate
+				priority = str(random.randint(1,1000))
+				if len(used) > FLOW_PER_SWITCH and dup == 0:
+					on_switch, field, value = random.choice(list(used))
+					while on_switch == switch or (field,value) in used_this_switch:
+						on_switch, field, value = random.choice(list(used))
+					used_this_switch.add((field,value))
+					f.write(str(switch)+','+field+','+str(value)+','+out_port+','+priority+'\n')
+					a += 1
+					continue
 				if field == 'eth_dst' or field == 'eth_src':
-					value = hex(random.randint(1,0xff))
+					value = hex(random.randint(1,0xff)).replace('0x','')
 					for i in xrange(5):
-						value += ':'+hex(random.randint(1,0xff))
+						value += ':'+hex(random.randint(1,0xff)).replace('0x','')
 				elif field == 'ipv4_src' or field == 'ipv4_dst':
-					value = str(random.randint(1,0xff))
-					for i in xrange(3):
-						value += '.'+str(random.randint(1,255))
+					value = '192.168.56.'+str(random.randint(1,0xff))
 				elif field == 'ipv6_src' or field == 'ipv6_dst':
 					value = hex(random.randint(1,0xff))
 					for i in xrange(7):
@@ -48,70 +84,92 @@ def flow_entry_gen(port_count):	#port count = the port that each switch have
 					value = str(SWITCH_NUM)
 					while value == out_port:	#in_port and out_port should be different to avoid infinity loop
 						value = str(SWITCH_NUM)
-				else:	
-					if field == 'tcp_src' or field == 'tcp_dst' or field == 'udp_src' or field == 'udp_dst':
-						value_range = 0xffff
-					else: #icmp code, value
-					 	value_range = 0xff
-					value = str(random.randint(1,value_range))
-				value = value.replace('0x','')
-				#print '===>'+str(switch)+','+field+','+value+','+out_port+'\n'
-				if field+value not in used:
-					f.write(str(switch)+','+field+','+value+','+out_port+'\n')
-					used.add(field+value)
+				elif field == 'tcp_src' or field == 'tcp_dst': 
+					b = random.randint(0,99)
+					common_ports = [7,20,21,22,23,25,43,53,109,110,156,161,194,546,547]	#common port other than http and https
+					if b < 50:	#http
+						value = 80
+					elif b < 75:	# https
+						value = 443
+					elif b < 90:	#other common
+						value = random.choice([7,20,21,22,23,25,43,53,109,110,156,161,194,546,547])
+					else:	#others
+						value = 7
+						while value in common_ports:
+							value = random.randint(1,1024)
+				elif field == 'udp_src' or field == 'udp_dst':
+					value = random.randint(1,1024)
+				else: #icmp code, value
+					 value = random.randint(1,0xff)
+				if (field,value) not in used_this_switch:	#prevent same match field with same value in same switch
+					f.write(str(switch)+','+field+','+str(value)+','+out_port+','+priority+'\n')
+					used_this_switch.add((field,value))
+					used.add((switch,field,value))
+					a += 1
 				#target switch, match field, match value, output port~
-			del used
+			del used_this_switch
 		f.close()
 	else:
 		print "pre-install entries file exist.."
+	return tot_entry
 
 def myNetwork():      
-	global SWITCH_NUM
-	net = Mininet()
-	info( '*** Adding controller\n' )
-	c0 = net.addController(name='c0',controller=RemoteController,ip='127.0.0.1', port=6633)
-	info( '*** Add switches\n')
-	for i in xrange(1,SWITCH_NUM+1):	#add switch
-		exec('s'+str(i)+' = net.addSwitch(\'s'+str(i)+'\',cls=OVSKernelSwitch)')
- 	h1 = net.addHost('h1', cls=Host, mac='00:04:00:00:00:01', ip='10.0.0.1/32')
-	info( '*** Add links\n')
-		
-	#if not os.path.isfile('config/'+config_file+'.link'):	#generate links if link file doesn't exist
-	#net.addLink(s1,h1)
-	net.addLink(s1,s2)
-	net.addLink(s1,s4)
-	net.addLink(s2,s3)
-	net.addLink(s2,s4)
-	net.addLink(s2,s5)
-	net.addLink(s3,s5)
-	net.addLink(s4,s5)
-	dst_switch = {} #destination of each switch, ex: dst_switch[0][2] = port 3 of s1
+	content = config_file.split('_')
+	if config_file[:8] == 'fat_tree':
+		k = int(content[2])
+		topo = fnss.fat_tree_topology(k)
+		tl = 'layer'
+	elif config_file[:8] == 'two_tier':
+		core,edge = int(content[2]),int(content[3])
+		topo = fnss.two_tier_topology(core,edge,1)
+		tl = 'tier'
+	elif config_file[:10] == 'three_tier':
+		core,aggregation,edge = int(content[2]),int(content[3]),int(content[4])
+		topo = fnss.three_tier_topology(core,aggregation,edge,1)
+		tl = 'tier'
+
+	node_type = networkx.get_node_attributes(topo,'type')
+	SWITCH_NUM = 0
+	for i in node_type:
+		if node_type[i] == 'switch':
+			SWITCH_NUM += 1
 	
-	dst_switch[1] = [2,4]
-	dst_switch[2] = [1,3,4,5]
-	dst_switch[3] = [2,5]
-	dst_switch[4] = [1,2,5]
-	dst_switch[5] = [2,3,4]
+	tier_list = []
+	#print topo.nodes('tier')
+	for node in topo.nodes('tier'):
+		tier_list.append(node[1][tl])
+	ENTRY_FACTOR = 5000
+	print 'switch count:%d, entry factor: %d' % (SWITCH_NUM,ENTRY_FACTOR)
+	mn_topo = fnss.to_mininet(topo)
+	#switch = partial(OVSSwitch,protocols='OpenFlow15')
+	net = Mininet(topo=mn_topo,controller=RemoteController)#,switch=switch)
+	net.start()
+	port_to_switch = {} #destination of each switch, ex: dst_switch[0][2] = port 3 of s1
+	for i in xrange(SWITCH_NUM):
+		port_to_switch[i+1] = {}
 
-	print "\n"
-	f = open('config/'+config_file+'.port_to_switch','w')
-	f.write(str(dst_switch))
-	f.close()
-	port_count = [len(dst_switch[i]) for i in dst_switch]
-	flow_entry_gen(port_count)	#write to file
-	info( '*** Starting network\n')
-	net.build()
-	info( '*** Starting controllers\n')
-	for controller in net.controllers:
-		controller.start()
-
-	info( '*** Starting switches\n')
-	for i in xrange(1,SWITCH_NUM+1):
-		print "Switch %d start" % i
-		exec('net.get(\'s'+str(i)+'\').start([c0])')
-	info( '*** Configuring switches\n')
+	for link in net.topo.links():
+		src_switch, dst_switch = link #might also be host
+		src_port, dst_port = net.topo.port(src_switch,dst_switch)
+		#print '%s port %d to %s port %d' % (src_switch,src_port,dst_switch,dst_port)
+		if src_switch[0] != 'h':
+			port_to_switch[int(src_switch[1:])][src_port] = dst_switch
+		if dst_switch[0] != 'h':
+			port_to_switch[int(dst_switch[1:])][dst_port] = src_switch
+	
+	if not os.path.isfile('config/'+config_file+'.port_to_switch'):
+		f = open('config/'+config_file+'.port_to_switch','w')
+		f.write(str(port_to_switch))
+		f.close()
+	TOTAL_ENTRY = flow_entry_gen(SWITCH_NUM,ENTRY_FACTOR, tier_list, port_to_switch)	
+	if not os.path.isfile('config/'+config_file):
+		print 'generating new config files....'
+		f = open('config/'+config_file,'w')
+		f.write('%d,%d,%d' % (SWITCH_NUM, ENTRY_FACTOR, TOTAL_ENTRY))
+		f.close()
 	CLI(net)
 	net.stop()
+	
 
 if __name__ == '__main__':
 	setLogLevel( 'info' )

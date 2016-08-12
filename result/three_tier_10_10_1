@@ -1,0 +1,23 @@
+topology type:three_tier_10_10_1
+---------------
+switch num:30
+link num:230
+total entry: 600
+total group: 213
+additional entry: 181
+Average link:7.666667 Effective aggregation rate: 2.816901
+Execution time: 7.806636
+Add entry wait time: 1.810000
+
+
+42 group with 1 entry
+54 group with 2 entry
+62 group with 3 entry
+8 group with 5 entry
+28 group with 6 entry
+4 group with 7 entry
+7 group with 8 entry
+6 group with 9 entry
+1 group with 11 entry
+1 group with 12 entry
+Average entry in group: 3.309859

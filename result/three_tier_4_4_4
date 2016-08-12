@@ -1,0 +1,10 @@
+topology type:three_tier_4_4_4
+---------------
+switch num:24
+link num:80
+total entry: 480
+total group: 294
+additional entry: 307
+Average link:3.333333 Average entry per group: 1.632653
+Execution time: 8.219920
+Add entry wait time: 3.070000

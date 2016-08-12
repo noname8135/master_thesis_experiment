@@ -1,0 +1,19 @@
+topology type:two_tier_6_14
+---------------
+switch num:20
+link num:182
+total entry: 400
+total group: 226
+additional entry: 262
+Average link:9.100000 Effective aggregation rate: 1.769912
+Execution time: 6.689239
+Add entry wait time: 2.620000
+
+
+171 group with 1 entry
+19 group with 2 entry
+15 group with 4 entry
+14 group with 6 entry
+6 group with 8 entry
+1 group with 10 entry
+Average entry in group: 1.818584

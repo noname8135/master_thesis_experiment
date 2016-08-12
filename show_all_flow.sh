@@ -4,6 +4,6 @@
 for i in $(seq 1 $1)
 do
 echo s$i:
-sudo ovs-ofctl dump-flows s$i
+sudo ovs-appctl bridge/dump-flows s$i
 done
 

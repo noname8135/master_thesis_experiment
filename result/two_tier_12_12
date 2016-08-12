@@ -1,0 +1,10 @@
+topology type:two_tier_12_12
+---------------
+switch num:24
+link num:300
+total entry: 480
+total group: 200
+additional entry: 225
+Average link:12.500000 Average entry per group: 2.400000
+Execution time: 9.267466
+Add entry wait time: 2.250000

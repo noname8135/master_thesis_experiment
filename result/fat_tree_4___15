@@ -1,0 +1,21 @@
+topology type:fat_tree_4
+---------------
+switch num:20
+link num:80
+total entry: 300
+total group: 116
+additional entry: 110
+Average link:4.000000 Effective aggregation rate: 2.586207
+Execution time: 5.531392
+Add entry wait time: 1.100000
+
+
+25 group with 1 entry
+41 group with 2 entry
+14 group with 3 entry
+9 group with 4 entry
+16 group with 5 entry
+5 group with 6 entry
+5 group with 7 entry
+1 group with 8 entry
+Average entry in group: 2.913793
